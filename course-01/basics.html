@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Web Page</title>
+    <meta name="description" content="Page Description Here" />
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+      Body {
+        color: red;
+      }
+    </style>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+  </head>
+
+  <body>
+    <p>This is a Sample HTML Document.</p>
+    This Javascript function will capitalize my name:
+    <p>
+      Enter your name:
+      <input type="text" id="fname" onchange="myFunction()" />
+    </p>
+    <p>
+      This is a block of text for the purposes of showing the spacing of a line
+      break <br />
+      (caused by the self-closing break tag)
+    </p>
+    <p>
+      as opposed to a new paragraph tag. <br />
+      You can also add individual spaces with non-break space, repeated for how
+      many you want &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; which
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seems
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inefficient.
+    </p>
+    <h4>This is important.</h4>
+    <h3>This is REALLY important.</h3>
+    <h2>This is EVEN MORE important.</h2>
+    <h1>I didn't think it was possible, but this is EVEN MORE important!</h1>
+    <h4>
+      I tried in-line text formating here, which is obselete, but apparently is
+      is so obselete that VSC won't even let me do it.
+    </h4>
+    <p>
+      <strong>This text is bold.</strong><br /><em>This text is italic.</em
+      ><br /><u>This text is underlined.</u><br /><s
+        >This text hath been struck right through.</s
+      >
+      <br />
+      <strong
+        ><em
+          ><u><s>This text is totally f***ed.</s></u></em
+        ></strong
+      >
+    </p>
+    <h3>What makes a list unordered?</h3>
+    <ul>
+      <li>It has</li>
+      <li>bullets</li>
+      <li>not</li>
+      <li>numbers</li>
+    </ul>
+    <h3>What makes a list ordered?</h3>
+    <ol>
+      <li>It</li>
+      <li>has</li>
+      <li>numbers</li>
+      <li>duh</li>
+    </ol>
+    <h1>Pictures</h1>
+    <p>
+      <a
+        href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwj98beBqo7wAhWbFVkFHd0mB88QFjACegQIAhAE&url=https%3A%2F%2Ftechacute.com%2Fpicross-luna-review%2F&usg=AOvVaw2L8yBSkjjJCyP20R_9XDir"
+        target="_blank"
+        ><image src="IMG_2404.png" , width="333" , height="250"></image
+      ></a>
+      <a
+        href="https://techcrunch.com/2016/05/10/please-dont-learn-to-code/"
+        target="_blank"
+        ><image
+          src="https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg"
+          ,
+          width="333"
+          ,
+          height="250"
+        ></image
+      ></a>
+    </p>
+    <video width="100%">
+      <source src="ya.mp4" , type="video/mp4" />
+    </video>
+    Your browser does not support the video tag (why do they want us to say
+    that?)
+    <p>
+      This is text written for the purpose of demonstrating
+      <a
+        href="https://techcrunch.com/2016/05/10/please-dont-learn-to-code/"
+        target="_blank"
+        >textual links.</a
+      >
+    </p>
+  </body>
+</html>
