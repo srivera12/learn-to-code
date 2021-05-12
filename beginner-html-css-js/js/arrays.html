@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="snack"></p>
+    <p id="numsnacks"></p>
+    <p id="snacks"></p>
+    <p id="snacks2"></p>
+    <p id="snacks3"></p>
+    <p id="snacks4"></p>
+    <p id="snacks5"></p>
+    <p id="healthies"></p>
+    <p id="food"></p>
+    <p id="readyfoods"></p>
+    <p id="mydinner"></p>
+    <script>
+      let fruits = ["Apple", "Orange", "Pear", "Grape", "Tangerine", "Mango"];
+      document.getElementById("snack").innerHTML = fruits[3];
+      document.getElementById("numsnacks").innerHTML = fruits.length;
+      document.getElementById("snacks").innerHTML = fruits.toString();
+      fruits.pop();
+      document.getElementById("snacks2").innerHTML = fruits.join(" * ");
+      fruits.shift();
+      document.getElementById("snacks3").innerHTML = fruits.join(" * ");
+      fruits.push("Cherry");
+      document.getElementById("snacks4").innerHTML = fruits.join(" * ");
+      fruits.unshift("Plum");
+      document.getElementById("snacks5").innerHTML = fruits.join(" * ");
+
+      let veggies = [
+        "Celery",
+        "Carrots",
+        "Broccoli",
+        "Asparagus",
+        "Potato",
+        "Cauliflower",
+      ];
+      veggies[0] = "Corn";
+      delete veggies[2];
+      document.getElementById("healthies").innerHTML = veggies.join(" * ");
+
+      let dinner = [
+        "Pizza",
+        "Lasagna",
+        "Burger",
+        "Fried Rice",
+        "Wings",
+        "Casserole",
+      ];
+      dinner.sort();
+      document.getElementById("readyfoods").innerHTML = dinner.join(" * ");
+      dinner.splice(2, 0, "Curry", "Biryani");
+      dinner.reverse();
+      document.getElementById("food").innerHTML = dinner.join(" * ");
+
+      let mydinner = dinner.concat(veggies)
+      document.getElementById("mydinner").innerHTML = mydinner.join(" * ")
+    </script>
+  </body>
+</html>
