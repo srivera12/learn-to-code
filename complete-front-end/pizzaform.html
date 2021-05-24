@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Best Pizza Ever!</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="This is a page to order delicious pizza while also watching a short and cute video."
+    />
+    <meta name="keywords" content="pizza,Astro's Playroom,order" />
+    <meta name="author" content="Sarah Rivera" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <h1>Best Pizza Ever!</h1>
+      <h4>Come and get some, homie.</h4>
+    </header>
+    <main>
+      <section id="contact-form">
+        <h2>Place Order</h2>
+        <form method="GET" action="place-order.php">
+          <h4>Delivery</h4>
+          <input name="delivery" type="radio" value="delivery" /> Delivery<br />
+          <input name="delivery" type="radio" value="pickup" /> Pick-Up
+          <h4>Address</h4>
+          <input
+            name="address1"
+            placeholder="Address Line 1"
+            class="lg-input"
+          />
+          <br />
+          <input
+            name="address2"
+            placeholder="Address Line 2"
+            class="lg-input"
+          />
+          <br />
+          <input name="city" placeholder="City" class="sm-input" />
+          <input name="state" placeholder="State" class="sm-input" />
+          <br />
+          <input name="zip" placeholder="Zip Code" class="sm-input" />
+          <br />
+          <br />
+          <h4>Size</h4>
+          <select name="size">
+            <option value="0"></option>
+            <option value="12">12" - $13.99</option>
+            <option value="16">16" - $16.99</option>
+            <option value="18">18" - $19.99</option>
+            <option value="72">72" - $149.99</option>
+          </select>
+          <br />
+          <br />
+          <h4>Ingredients</h4>
+          <input name="pepperoni" type="checkbox" />Pepperoni<br />
+          <input name="salami" type="checkbox" />Salami<br />
+          <input name="bacon" type="checkbox" />Bacon<br />
+          <input name="sausage" type="checkbox" />Sausage<br />
+          <input name="onion" type="checkbox" />Onions<br />
+          <input name="peppers" type="checkbox" />Green Peppers<br /><br /><br />
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+      <section>
+        <video
+          src="63606922822__80850D56-DC61-44AA-A3D7-73985C5D87E8.MOV"
+          width="540px"
+          controls
+        >
+          Your browser does not support this video.
+        </video>
+      </section>
+    </main>
+    <footer align="center">
+      &copy 2021 <br />
+      <a href="#">Terms of Service</a>
+    </footer>
+  </body>
+</html>
