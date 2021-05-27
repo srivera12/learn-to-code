@@ -1,13 +1,67 @@
 <html>
   <head>
     <title>Best News Ever!</title>
+    <link rel="stylesheet" href="newsstyles.css" />
+    <meta
+      name="description"
+      content="This is a site where you can get all of the absolutely best news. Accuracy is not guarunteed becuause who cares about accuracy!"
+    />
+    <meta
+      name="keywords"
+      content="news, best, dog, clown, chocolate, space,  HTML5"
+    />
+    <meta name="author" content="Sarah Rivera" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <header>
-      <h1>Best News Ever!</h1>
+    <header id="main-header">
+      <h1 id="site-title">Best News Ever!</h1>
       <h3>We don't care if it's accurate, we care that it's the BEST!</h3>
     </header>
     <main>
+      <section id="top-stories">
+        <article>
+          <div
+            class="article-img"
+            style="
+              background: url(https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=0d3f33fb6aa6e0154b7713a00454c83d);
+            "
+          ></div>
+          <a href="#"><h3>Dog Kidnaps Clown</h3></a>
+          <p>
+            In a shocking turn of events, a dog has kidnapped a clown, and is
+            demanding a helicopter and a Big Mac.
+            <a class="more-link" href="#">Read more here</a>
+          </p>
+        </article>
+        <article>
+          <div
+            class="article-img"
+            style="
+              background: url(http://www.hawaii.edu/news/wp-content/uploads/2018/03/manoa-chemistry-chocolate-molecules.jpg);
+            "
+          ></div>
+          <a href="#"><h3>New Study Confirms Chocolate Is In Space</h3></a>
+          <p>
+            Have you ever wondered what outer space tastes like? New study
+            confirms that it tastes like chocolate, but without the calories.
+            <a class="more-link" href="#">Read more here</a>
+          </p>
+        </article>
+        <article>
+          <div
+            class="article-img"
+            style="
+              background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRgD19qMdjAtHrNyJU4b4mi42s8GqGvz8Mw&usqp=CAU);
+            "
+          ></div>
+          <a href="#"><h3>HTML5 Saves the Day!</h3></a>
+          <p>
+            Since it's introduction, there's been less div soup.
+            <a class="more-link" href="#">Read more here</a>
+          </p>
+        </article>
+      </section>
       <section>
         <h2>About Me</h2>
         <p>
@@ -15,31 +69,12 @@
           prefer the best news, not the most accurate.
         </p>
       </section>
-      <section>
-        <article>
-          <a href="#""><h3>Dog Kidnaps Clown</h3></a>
-          <p>
-            In a shocking turn of events, a dog has kidnapped a clown, and is
-            demanding a helicopter and a Big Mac.
-          </p>
-        </article>
-        <article>
-            <a href="#""><h3>New Study Confirms Chocolate Is In Space</h3></a>
-            <p>
-                Have you ever wondered what outer space tastes like? New study confirms that it tastes like chocolate, but without the calories.
-            </p>
-          </article>
-          <article>
-            <a href="#""><h3>HTML5 Saves the Day!</h3></a>
-            <p>
-              Since it's introduction, there's been less div soup.
-            </p>
-          </article>
-      </section>
     </main>
     <footer>
-        <center>&copy; 2021</center></footer><br/>
+      <p>
+        &copy; 2021<br />
         <a href="#">Terms of Service</a>
+      </p>
     </footer>
   </body>
 </html>

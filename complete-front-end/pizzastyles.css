@@ -1,0 +1,25 @@
+body {
+  background: rgba(255, 200, 100, 0.5);
+  color: #0af;
+}
+
+h3 {
+  color: #000;
+}
+
+body h3 {
+  color: #f00;
+  margin: 10px;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+body > header > h3 {
+  background: #fff;
+  color: #0f0;
+}
+
+h1 {
+  float: left;
+  margin-left: 200px;
+}
