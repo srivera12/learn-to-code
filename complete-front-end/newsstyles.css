@@ -3,7 +3,7 @@
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  font-weight: 300 !important;
+  font-weight: 300;
   text-shadow: 2px 2px 5px black;
 }
 
@@ -31,11 +31,12 @@ body h1 {
 
 article {
   max-width: 300px;
-  display: inline-table;
+  display: inline-block;
   height: 340px;
   padding: 10px;
   margin: 10px;
   box-shadow: none;
+  vertical-align: top;
 }
 
 article:hover {
@@ -45,8 +46,8 @@ article:hover {
 .article-img {
   height: 200px;
   width: 100%;
-  background-size: cover !important;
-  background-position: center !important;
+  background-size: cover;
+  background-position: center;
 }
 
 .more-link {
@@ -73,4 +74,16 @@ p {
   word-spacing: 2px;
   text-indent: 20px;
   text-align: center;
+}
+
+#dog.article-img {
+  background-image: url(https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=0d3f33fb6aa6e0154b7713a00454c83d);
+}
+
+#choco.article-img {
+  background-image: url(http://www.hawaii.edu/news/wp-content/uploads/2018/03/manoa-chemistry-chocolate-molecules.jpg);
+}
+
+#html.article-img {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRgD19qMdjAtHrNyJU4b4mi42s8GqGvz8Mw&usqp=CAU);
 }
