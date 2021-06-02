@@ -10,6 +10,11 @@ body {
 body h1 {
   font-weight: 300;
   margin: 0px;
+  z-index: 1;
+  position: absolute;
+}
+body h3 {
+  margin-top: 50px;
 }
 
 #site-title {
@@ -21,6 +26,35 @@ body h1 {
   border-bottom: 2px solid #000;
   background-color: darkblue;
   color: white;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  opacity: 0.9;
+  top: 0px;
+}
+
+#main-header::before {
+  /* talk to Tio about this becuase I'm not sure this was explained very well. 
+  Like specifically what this is and why we would want to use it. (psuedo-elements) */
+  content: "";
+  display: block;
+  width: 30px;
+  height: 40px;
+  background-color: gray;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+  z-index: 0;
+}
+
+#main-header::after {
+  /* same */
+  content: "";
+  display: block;
+  width: 10px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
 }
 
 #top-stories {
@@ -32,15 +66,17 @@ body h1 {
 article {
   max-width: 300px;
   display: inline-block;
-  height: 340px;
+  height: 375px;
   padding: 10px;
   margin: 10px;
   box-shadow: none;
   vertical-align: top;
+  transition: box-shadow .5s, background-color 2s;
 }
 
 article:hover {
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.6);
+  background-color: lightgray;
 }
 
 .article-img {
@@ -73,17 +109,54 @@ p {
   letter-spacing: 1px;
   word-spacing: 2px;
   text-indent: 20px;
-  text-align: center;
+  text-align: left;
 }
 
 #dog.article-img {
   background-image: url(https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=0d3f33fb6aa6e0154b7713a00454c83d);
+  border-top-left-radius: 50px 100px;
+  border: 2px solid black;
 }
 
 #choco.article-img {
   background-image: url(http://www.hawaii.edu/news/wp-content/uploads/2018/03/manoa-chemistry-chocolate-molecules.jpg);
+  width: 200px !important;
+  height: 200px !important;
+  border-radius: 100%;
 }
 
 #html.article-img {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRgD19qMdjAtHrNyJU4b4mi42s8GqGvz8Mw&usqp=CAU);
+}
+
+a:hover {
+  color: green;
+}
+
+.my-input {
+  display: block;
+  width: 90%;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 0px 20px;
+  border: 1px solid black;
+  margin-top: 120px;
+}
+
+.my-input:focus {
+  background-color: lightgreen;
+  outline: none;
+  border: 1px solid black;
+}
+
+article:active {
+  opacity: 0.4;
+}
+
+#my-text {
+  max-height: 200px;
+  background-color: lightblue;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin-top: 200px;
 }
