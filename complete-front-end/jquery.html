@@ -1,0 +1,66 @@
+<html>
+  <body>
+    <div id="context">
+      <ul class="context-menu">
+        <li><a href="#" class="hidden newtab">Open new tab</a></li>
+        <li><a href="#">Back</a></li>
+        <li><a href="#">Forward</a></li>
+        <li><a href="#">Reload</a></li>
+        <li><a href="#" class="hidden saveimg">Save image as...</a></li>
+        <li><a href="#" class="hidden saveas">Save as...</a></li>
+        <li><a href="#">Inspect Element</a></li>
+      </ul>
+    </div>
+    <header>
+      <h1 class="title">There's jQuery on This Page!</h1>
+      <ul class="profile-menu">
+        <li>
+          <a class="profile-menu-trigger" data-trigger="dropdown" href="#"
+            >Logged in as USERNAME</a
+          >
+          <ul class="profile-submenu submenu">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <link rel="stylesheet" href="jquery.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.js"></script>
+    <div id="text">What is my text?</div>
+    <button id="go-button">Click Me!</button>
+    <br /><br />
+    <section>
+      <form action="submit.php">
+        <textarea placeholder="type something" class="my-text"></textarea><br />
+        <button id="append">Append</button>
+        <button id="prepend">Prepend</button>
+        <button id="replace">Replace</button>
+      </form>
+    </section>
+    <br /><br /><br />
+    <section id="main">
+      <a id="link" href="https://www.google.com/" target="_blank"
+        >Go to Google</a
+      >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac
+        sem molestie, blandit tortor et, accumsan elit. Maecenas tincidunt magna
+        quis sapien convallis, sit amet vehicula justo consectetur. Aenean
+        mattis porta justo, a aliquet ex efficitur non. Donec imperdiet, nisl ac
+        dictum tincidunt, est mauris porta leo, eget luctus felis lectus eget
+        sapien. Nunc ornare accumsan tincidunt. Vivamus vitae dapibus neque.
+        Vivamus vitae quam in mauris viverra vehicula sit amet tempus ex. Donec
+        sit amet volutpat elit. Quisque aliquet, nibh sit amet aliquet accumsan,
+        leo tellus interdum nulla, vel facilisis dui tellus malesuada est. Donec
+        justo tellus, dictum non felis a, eleifend laoreet neque.
+      </p>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ggprnxzX2NurR5IhgMQS-ufCv3G-5QBNYA&usqp=CAU"
+      />
+    </section>
+  </body>
+</html>
