@@ -8,7 +8,7 @@ alert(welcome);
 let myAge = 26;
 // Tis an integer
 let exactAge = 26.48;
-// Tis a float - IDK why ask Tio
+// Tis a float
 console.log("My age is " + myAge);
 
 myAge++;
@@ -66,14 +66,12 @@ function saySomething(phrase) {
 }
 
 function getPhrase(phrase, another) {
-  // Why can't we just return phrase.length? Why do we need to define the variable? 
+  // Why can't we just return phrase.length? Why do we need to define the variable?
   // I tried it and it worked.
-  // Nevermind, I see the greated control when we added an additional parameter.
   let l = phrase.length;
   if (typeof another !== "undefined") {
-    l += another.length
+    l += another.length;
   }
-  return l;
   // This doesn't work for me - just prints the function. Seemed to work for him
   // function printBoth() {
   //   return phrase + " " + another;
@@ -82,11 +80,11 @@ function getPhrase(phrase, another) {
 
   // This is what worked for me:
   function printBoth() {
-    console.log (phrase + " " + another)
+    console.log(phrase + " " + another);
   }
-  printBoth();
+  return printBoth();
   // I figured it out, it can't do both. More nonsense of this guy reusing code to do new things
-  // instead of just writing somethng new. Face palm.
+  // instead of just writing something new. Face palm.
 }
 
 saySomething("Hello, how are you?");
@@ -94,8 +92,8 @@ saySomething("Hello, how are you?");
 const p = "This is a phrase.";
 saySomething(p);
 
-let p1 = "This is a slightly longer sentence."
-let p2 = "This is a shorter sentence."
+let p1 = "This is a slightly longer sentence.";
+let p2 = "This is a shorter sentence.";
 let computed = getPhrase(p1, p2);
 console.log(computed);
 // Why can't we just put the console.log as another line in the getPhraseLength function?
