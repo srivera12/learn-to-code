@@ -30,23 +30,29 @@
     <link rel="stylesheet" href="jquery.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="jquery.js"></script>
+    <script src="sQuery.js"></script>
     <div id="text">What is my text?</div>
     <button id="go-button">Click Me!</button>
     <br /><br />
     <section>
+      <p>This is text.</p>
+      <p>Even more text.</p>
+      <p>Texty texty text text.</p>
       <form action="submit.php">
         <textarea placeholder="type something" class="my-text"></textarea><br />
+        <input name="email" placeholder="Email">
+        <p class="status"></p>
         <button id="append">Append</button>
         <button id="prepend">Prepend</button>
         <button id="replace">Replace</button>
       </form>
     </section>
     <br /><br /><br />
-    <section id="main">
-      <a id="link" href="https://www.google.com/" target="_blank"
+    <a id="link" href="https://www.google.com/" target="_blank"
         >Go to Google</a
       >
-      <p>
+    <section id="main">
+      <p class="my-selector">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac
         sem molestie, blandit tortor et, accumsan elit. Maecenas tincidunt magna
         quis sapien convallis, sit amet vehicula justo consectetur. Aenean
@@ -58,9 +64,9 @@
         leo tellus interdum nulla, vel facilisis dui tellus malesuada est. Donec
         justo tellus, dictum non felis a, eleifend laoreet neque.
       </p>
-      <img
+    </section>
+    <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ggprnxzX2NurR5IhgMQS-ufCv3G-5QBNYA&usqp=CAU"
       />
-    </section>
   </body>
 </html>
