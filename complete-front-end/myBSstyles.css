@@ -1,0 +1,17 @@
+/* This took a lot more than he did to remove the border - trouble with Developer Tools again too, see pics 
+.form-control {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-width: 0px !important;
+    border-left-width: 0px !important;
+    border-right-width: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-top-width: 0px !important;
+} */
+
+/* This was easier, but the Developer tools were still loopy, see pictures
+.btn {
+    border-radius: 0px;
+    border-width: 0px;
+} */
