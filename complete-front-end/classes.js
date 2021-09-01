@@ -11,16 +11,12 @@ class Animal {
   }
 }
 
-Animal.planet = "Exandria";
-
-// I'm a little confused about variables vs objects here. We are defining these animals like
-// variables, but the guy keeps calling them objects, and they have multiple parameters/descriptors
-// like objects do.
+Animal.prototype.planet = "Exandria";
 
 class Cat extends Animal {
   constructor(name, height, weight, meowVolume, hairballSize) {
-      console.log("There is a cat.")
     super(name, height, weight);
+    console.log("There is a cat.");
     this.meowVolume = meowVolume;
     this.hairballSize = hairballSize;
   }
@@ -34,13 +30,15 @@ class Cat extends Animal {
   }
 }
 
-let cat = new Cat("Frumpkin", 12, 5, 35, 0);
+const cat = new Cat("Frumpkin", 12, 5, 35, 0);
+console.log(cat.planet);
 cat.meow();
+console.log(cat.nameLength());
 
 class Bear extends Animal {
   constructor(name, height, weight, honeyHunger) {
-      console.log("There is a bear.")
     super(name, height, weight);
+    console.log("There is a bear.");
     this.honeyHunger = honeyHunger;
   }
 
@@ -53,8 +51,8 @@ class Bear extends Animal {
   }
 }
 
-let bear = new Bear("Trinket", 70, 350);
+const bear = new Bear("Trinket", 70, 350);
 bear.hunger();
 
 console.log(bear.nameLength());
-console.log(bear.constructor.planet);
+console.log(bear.planet);
