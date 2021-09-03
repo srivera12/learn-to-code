@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="pipboy.css" />
+    <title>Sarah's Pipboy</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link active" href="pipboy.html">STAT</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="inv.html">INV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">DATA</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">MAP</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">RADIO</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul id="stat-tabs" class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="status-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#status"
+                type="button"
+                role="tab"
+                aria-controls="status"
+                aria-selected="true"
+              >
+                STATUS
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="special-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#special"
+                type="button"
+                role="tab"
+                aria-controls="special"
+                aria-selected="false"
+              >
+                SPECIAL
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="perks-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#perks"
+                type="button"
+                role="tab"
+                aria-controls="perks"
+                aria-selected="false"
+              >
+                PERKS
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content">
+      <div
+        class="tab-pane show active"
+        id="status"
+        role="tabpanel"
+        aria-labelledby="status-tab"
+      >
+        <div class="center-image">
+          <img id="vault-boy" src="VaultBoy.png" />
+        </div>
+        <div class="stat-bars">
+          <div class="row">
+            <div class="col-12">
+              <div class="stat-bar">
+                <div class="level-progress">
+                  <div class="level-progress-indicator w90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="stat-bar">
+                <div class="level-progress">
+                  <div class="level-progress-indicator w50"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+              <div class="stat-bar">
+                <div class="level-progress">
+                  <div class="level-progress-indicator w60"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <div class="stat-bar">
+                <div class="level-progress">
+                  <div class="level-progress-indicator w20"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+              <div class="stat-bar">
+                <div class="level-progress">
+                  <div class="level-progress-indicator w70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="stat-bar">
+                <div class="level-progress">
+                  <div class="level-progress-indicator w40"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row stat-numbers">
+          <div class="col-1 transparent"></div>
+          <div class="col-2">
+            <img src="pip-gun.png" class="lg-img img-fluid" />
+          </div>
+          <div class="col-1">
+            <div class="icon">
+              <img src="pip-crosshair.png" class="sm-img" />
+            </div>
+            <div class="points">90</div>
+          </div>
+          <div class="col-1 transparent"></div>
+          <div class="col-2">
+            <img src="pip-helmet.png" class="img-fluid lg-img" />
+          </div>
+          <div class="col-1">
+            <div class="icon">
+              <img src="pip-energy.png" class="sm-img" />
+            </div>
+            <div class="points">20</div>
+          </div>
+          <div class="col-1">
+            <div class="icon">
+              <img src="pip-radiation.png" class="sm-img" />
+            </div>
+            <div class="points">01</div>
+          </div>
+          <div class="col-2 transparent"></div>
+        </div>
+      </div>
+      <div
+        class="tab-pane"
+        id="special"
+        role="tabpanel"
+        aria-labelledby="special-tab"
+      >
+        SPECIAL
+      </div>
+      <div
+        class="tab-pane"
+        id="perks"
+        role="tabpanel"
+        aria-labelledby="perks-tab"
+      >
+        PERKS
+      </div>
+    </div>
+    <div class="row pip-footer">
+      <div class="col-3">HP 90/90</div>
+      <div class="col-6">
+        <span>LEVEL 1</span>
+        <div class="level-progress">
+          <div class="level-progress-indicator w30"></div>
+        </div>
+      </div>
+      <div class="col-3 text-end">AP 90/90</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="pipboy.js"></script>
+  </body>
+</html>
