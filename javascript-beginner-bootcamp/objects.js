@@ -37,7 +37,7 @@ snowman.madeOfSnowballs = 8;
 snowman["full name"] = "Jack Frost";
 console.log(snowman);
 
-// build a house, add 4 property values in dot notation and 3 value types, 
+// build a house, add 4 property values in dot notation and 3 value types,
 // then add 3 property values with bracket notation that can't be added with dot notation
 const house = {};
 house.color = "blue";
@@ -51,12 +51,12 @@ console.log(house);
 
 // make a home constructor function and make 3 homes
 function Home(rooms, apartment, color, swimmingPool, state, city) {
-    this.rooms = rooms;
-    this.apartment = apartment;
-    this.color = color;
-    this.swimmingPool = swimmingPool;
-    this.state = state;
-    this.city = city;
+  this.rooms = rooms;
+  this.apartment = apartment;
+  this.color = color;
+  this.swimmingPool = swimmingPool;
+  this.state = state;
+  this.city = city;
 }
 const home1 = new Home(2, true, "green", false, "VA", "Richmond");
 const home2 = new Home(5, false, "white", true, "FL", "Miami");
@@ -64,17 +64,17 @@ const home3 = new Home(4, false, "purple", false, "CO", "Boulder");
 
 // make a book in object literal notation, then a book constructor function and make 5 books
 const book = {
-    title: "The Wind in the Oaks",
-    pageCount: 572,
-    coverColor: "green", 
-    checkedOut: false
+  title: "The Wind in the Oaks",
+  pageCount: 572,
+  coverColor: "green",
+  checkedOut: false,
 };
 function Book(title, pageCount, coverColor, checkedOut) {
-    this.title = title;
-    this.pageCount = pageCount;
-    this.coverColor = coverColor;
-    this.checkedOut = checkedOut;
-};
+  this.title = title;
+  this.pageCount = pageCount;
+  this.coverColor = coverColor;
+  this.checkedOut = checkedOut;
+}
 const book1 = new Book("Pride and Pestilence", 898, "pink", true);
 const book2 = new Book("Moby Dad", 1125, "dark blue", false);
 const book3 = new Book("The Great Ghastly", 346, "purple", true);

@@ -29,7 +29,15 @@ console.log(lastItemPhil);
 
 // create two color arrays and add them together
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-const extraColors = ["pink", "grey", "black", "brown", "purple", "turquoise", "lavender"];
+const extraColors = [
+  "pink",
+  "grey",
+  "black",
+  "brown",
+  "purple",
+  "turquoise",
+  "lavender",
+];
 const allColors = colors.concat(extraColors);
 console.log(allColors);
 
@@ -40,7 +48,16 @@ const alphaAllColors = allColors.sort();
 console.log(alphaAllColors);
 
 // use the weather array to create a winter array and a summer array
-const weather = ["rainy", "cold", "chilly", "snowy", "cloudy", "hot", "warm", "humid"];
+const weather = [
+  "rainy",
+  "cold",
+  "chilly",
+  "snowy",
+  "cloudy",
+  "hot",
+  "warm",
+  "humid",
+];
 const winter = weather.slice(0, 5);
 console.log(winter);
 const summer = weather.slice(5);
@@ -52,13 +69,9 @@ console.log(negWinter);
 const negSummer = weather.slice(-3);
 console.log(negSummer);
 
-
-
-
 // SECTION REVIEW/QUIZ: ARRAYS
 
-
-// which option will create an array? 
+// which option will create an array?
 // b. const array = [];
 // d. const array = [1, 2, 3, 4, 5];
 
@@ -86,7 +99,15 @@ const namesArr = ["John", "Michael", "Sarah", "Alex"];
 // const all = women.concat(men, pets);
 
 // what method will reverse the order of the array?
-const royGBiv = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+const royGBiv = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "indigo",
+  "violet",
+];
 // b. royGBiv.reverse();
 // what method will place them in alphabetical order?
 // e. royGBiv.sort();

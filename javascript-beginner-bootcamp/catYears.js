@@ -30,8 +30,6 @@ console.log(
     " years old in cat years."
 );
 
-
-
 // not part of the assignment, but I'm curious:
 const shawnAge = 11;
 let shawnEarlyYears = 2;

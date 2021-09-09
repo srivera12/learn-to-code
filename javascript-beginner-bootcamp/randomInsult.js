@@ -6,4 +6,12 @@ const randomBodyPart = randomBodyParts[Math.floor(Math.random() * 4)];
 const randomAdjective = randomAdjectives[Math.floor(Math.random() * 4)];
 const randomWord = randomWords[Math.floor(Math.random() * 5)];
 
-console.log("Your " + randomBodyPart + " is like a " + randomAdjective + " " + randomWord + "!!!!");
+console.log(
+  "Your " +
+    randomBodyPart +
+    " is like a " +
+    randomAdjective +
+    " " +
+    randomWord +
+    "!!!!"
+);

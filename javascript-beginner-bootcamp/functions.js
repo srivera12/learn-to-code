@@ -10,30 +10,30 @@ goodEveningNeighbor("Sally", "helping with the gardening");
 
 // call the following function
 function knockKnock() {
-    console.log("Who's there?");
+  console.log("Who's there?");
 }
 knockKnock();
 
 // turn the named function into an anonymous function in a variable, then call the function
-const knockKnock1 = function() {
-    console.log("Who's there?");
-}
+const knockKnock1 = function () {
+  console.log("Who's there?");
+};
 knockKnock1();
 
 // turn the following declared function into an IIFE stored in a variable and then call it
 function dogWalker(person, dog) {
-    console.log(person + " is taking " + dog + " for a walk.");
+  console.log(person + " is taking " + dog + " for a walk.");
 }
 dogWalker("Samantha", "Rex");
-const dogWalker1 = (function(person, dog) {
-    console.log(person + " is taking " + dog + " for a walk.");
-}("Susie", "Jack"));
+const dogWalker1 = (function (person, dog) {
+  console.log(person + " is taking " + dog + " for a walk.");
+})("Susie", "Jack");
 
 // for the following function, place the variables in the global scope
 const gallons = 12;
 const mpg = 34;
-function roadTrip(){
-    console.log(gallons * mpg);
+function roadTrip() {
+  console.log(gallons * mpg);
 }
 roadTrip();
 
@@ -41,11 +41,11 @@ roadTrip();
 // then call the innermost function
 const beverage = "Lady Grey tea";
 function isItTeaTime() {
-    const food = "lemon poppyseed scone";
-    console.log("It's tea time!");
-    function teaTime() {
-        console.log("I am enjoying a " + food + " with my " + beverage + ".");
-    }
-    teaTime();
+  const food = "lemon poppyseed scone";
+  console.log("It's tea time!");
+  function teaTime() {
+    console.log("I am enjoying a " + food + " with my " + beverage + ".");
+  }
+  teaTime();
 }
 isItTeaTime();

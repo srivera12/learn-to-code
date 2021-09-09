@@ -59,11 +59,7 @@ console.log(happyGreeting);
 const angryGreeting = greeting + " " + angryAtGuest;
 console.log(angryGreeting);
 
-
-
-
 // SECTION REVIEW/QUIZ: JAVASCRIPT BUILDING BLOCKS
-
 
 // proper way to declare a variable (even if it is var) is b:
 var color = "blue";
@@ -98,7 +94,7 @@ greeting.length;
 greeting.toUpperCase();
 
 // true or false?
-// true: 
+// true:
 // b: ++x; //8
 // d: x--; //7
 // false:
@@ -109,7 +105,7 @@ greeting.toUpperCase();
 34 % 9; //7
 12 % 4; //0
 9 % 2; //1
-15 % 4 //3
+15 % 4; //3
 
 // true or false?
 // true:
