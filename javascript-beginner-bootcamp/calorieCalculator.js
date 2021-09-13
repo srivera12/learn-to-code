@@ -2,7 +2,7 @@
 // we aren't really able to do that yet
 
 // sets input to lowercase, and returns calorie amount
-function inputCaloriesByDay(day) {
+function getCaloriesByDay(day) {
   day = day.toLowerCase();
   if (day === "monday") {
     return 3500;
@@ -26,13 +26,13 @@ function inputCaloriesByDay(day) {
 // add up all calories to get weekly total
 function getTotalCalories() {
   return (
-    inputCaloriesByDay("monday") +
-    inputCaloriesByDay("tuesday") +
-    inputCaloriesByDay("wednesday") +
-    inputCaloriesByDay("thursday") +
-    inputCaloriesByDay("friday") +
-    inputCaloriesByDay("saturday") +
-    inputCaloriesByDay("sunday")
+    getCaloriesByDay("monday") +
+    getCaloriesByDay("tuesday") +
+    getCaloriesByDay("wednesday") +
+    getCaloriesByDay("thursday") +
+    getCaloriesByDay("friday") +
+    getCaloriesByDay("saturday") +
+    getCaloriesByDay("sunday")
   );
 }
 

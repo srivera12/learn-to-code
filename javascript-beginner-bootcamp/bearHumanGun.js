@@ -5,14 +5,14 @@ function getUserChoice(userInput) {
     console.log("Your choice is " + userInput + ".");
     return userInput;
   } else {
-    console.log("The only valid choices are human, gun, or bear.");
+    throw "The only valid choices are human, gun, or bear.";
   }
 }
 
 // computer's choice
+const possibleChoices = ["gun", "human", "bear"];
 function getComputerChoice() {
-  possibleChoices = ["gun", "human", "bear"];
-  let randomChoice = possibleChoices[Math.floor(Math.random() * 3)];
+  const randomChoice = possibleChoices[Math.floor(Math.random() * 3)];
   console.log("The computer chose " + randomChoice + ".");
   return randomChoice;
 }
@@ -43,11 +43,33 @@ function determineWinner(userChoice, computerChoice) {
 }
 
 // pulling it all together
-function playGame() {
+function playGameConsole() {
+  const readline = require("readline");
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+  rl.question(
+    "Please choose bear, human, or gun: ",
+    function (promptUserChoice) {
+      playGame(promptUserChoice);
+      rl.close();
+    }
+  );
+}
+function playGameHTML() {
   const promptUserChoice = prompt("Please choose bear, human, or gun.");
+  playGame(promptUserChoice);
+}
+function playGame(promptUserChoice) {
   const userChoice = getUserChoice(promptUserChoice);
   const computerChoice = getComputerChoice();
   console.log(determineWinner(userChoice, computerChoice));
 }
+
 // begin!
-playGame();
+if (typeof require === "undefined") {
+  playGameHTML();
+} else {
+  playGameConsole();
+}
