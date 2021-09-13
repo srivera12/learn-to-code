@@ -17,21 +17,13 @@
 // });
 
 // HTML METHOD
-// input username
+// collect inputs
 const userName = prompt("What is your name?");
-// greeting
-if (userName) {
-  document.getElementById("name").innerText = `Hello ${userName}!`;
-} else {
-    document.getElementById("name").innerText = `Hello ${userName}!`;
-}
-// input and reference question
 const userQuestion = prompt("Please ask a question!");
-if (userQuestion) {
-  document.getElementById("question").innerHTML = `${userName}, you asked: "${userQuestion}"`;
-  // generate response
-  let randomNumber = Math.floor(Math.random() * 8);
-  let eightBall = "";
+// generate response
+let randomNumber = Math.floor(Math.random() * 8);
+let eightBall = "";
+function shake() {
   switch (randomNumber) {
     case (randomNumber = 0):
       eightBall = "Why would I care?";
@@ -58,8 +50,40 @@ if (userQuestion) {
       eightBall = "Just stay home and watch Netflix.";
       break;
   }
-  // share response
-  document.getElementById("answer").innerHTML = `The Magic Eight Ball says: "${eightBall}"`;
+}
+// greeting
+if (userName) {
+  document.getElementById("name").innerText = `Hello ${userName}!`;
+  // input and reference question
+  if (userQuestion) {
+    document.getElementById(
+      "question"
+    ).innerHTML = `${userName}, you asked: "${userQuestion}"`;
+    // generate response
+    shake();
+    // share response
+    document.getElementById(
+      "answer"
+    ).innerHTML = `The Magic Eight Ball says: "${eightBall}"`;
+  } else {
+    document.getElementById("answer").innerHTML =
+      "Really?? No question? Stop wasting my time.";
+  }
 } else {
-  document.getElementById("answer").innerHTML = "Really?? No question? Stop wasting my time.";
+  document.getElementById("name").innerText = `Hello!`;
+  // input and reference question
+  if (userQuestion) {
+    document.getElementById(
+      "question"
+    ).innerHTML = `You asked: "${userQuestion}"`;
+    // generate response
+   shake();
+    // share response
+    document.getElementById(
+      "answer"
+    ).innerHTML = `The Magic Eight Ball says: "${eightBall}"`;
+  } else {
+    document.getElementById("answer").innerHTML =
+      "Really?? No question? Stop wasting my time.";
+  }
 }
