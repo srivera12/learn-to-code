@@ -1,4 +1,4 @@
-// // Working on readline
+// Working on readline
 // const readline = require("readline");
 // const rl = readline.createInterface({
 //   input: process.stdin,
@@ -12,14 +12,17 @@
 //   }
 //   rl.question("Please ask a question:  ", function (userQuestion) {
 //     console.log(`${userName}, you asked: "${userQuestion}"`);
+//     rl.close();
 //   })
-//   rl.close();
 // });
 
 // HTML METHOD
 // collect inputs
 const userName = prompt("What is your name?");
-const userQuestion = prompt("Please ask a question!");
+let userQuestion = prompt("Please ask a question!");
+while (!userQuestion.trim()) {
+  userQuestion = prompt("YOU MUST ASK A QUESTION")
+}
 // generate response
 let randomNumber = Math.floor(Math.random() * 8);
 let eightBall = "";

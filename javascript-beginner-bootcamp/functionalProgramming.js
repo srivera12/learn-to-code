@@ -1,9 +1,7 @@
 // use the filter method to create a goOutside array
 const weather = [74, 68, 34, 56, 92, 24, 47, 85, 62, 54];
 const niceWeather = function (temp) {
-  if (temp > 60 && temp < 87) {
-    return temp > 60;
-  }
+  return temp > 60 && temp < 87;
 };
 const goOutside = weather.filter(niceWeather);
 console.log(goOutside);
@@ -18,8 +16,8 @@ const forecast = [
   { day: "Saturday", sun: true },
   { day: "Sunday", sun: false },
 ];
-const sunnyDays = forecast.filter(function (sunny) {
-  return sunny.sun;
+const sunnyDays = forecast.filter(function (daily) {
+  return daily.sun;
 });
 console.log(sunnyDays);
 
@@ -71,9 +69,11 @@ console.log(mostTrophies);
 
 // use the map and reduce methods on the same array
 const smallNumbers = [3, 6, 4, 2, 7];
-const oneNumber = smallNumbers.map(function (x) {
+const oneNumber = smallNumbers
+  .map(function (x) {
     return x + 5;
-}).reduce(function(a, b) {
+  })
+  .reduce(function (a, b) {
     return a + b;
-});
+  });
 console.log(oneNumber);
