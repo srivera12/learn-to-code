@@ -1,0 +1,20 @@
+body {
+    padding: 2% 10%;
+    background-color: black;
+    color: white;
+}
+
+.list-group-item {
+    background-color: cyan;
+    margin: 1% 0;
+}
+
+ul, h1, h2, form {
+    margin: 5% 0;
+    align-self: center;
+}
+
+.list-group-item.done {
+    background-color: slategray;
+    text-decoration: line-through;
+}
