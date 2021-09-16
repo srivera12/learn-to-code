@@ -10,7 +10,6 @@ const storKey = "todos";
 const thing = localStorage.getItem(storKey);
 let todosArray = thing ? JSON.parse(thing) : [];
 localStorage.setItem(storKey, JSON.stringify(todosArray));
-let storage = JSON.parse(thing);
 
 // inputting tasks
 function todoMaker(input) {
@@ -28,8 +27,8 @@ inputForm.addEventListener("submit", function (e) {
 });
 
 // keeping tasks that are in local storage
-for (let i = 0; i < storage.length; i++) {
-  todoMaker(storage[i]);
+for (let i = 0; i < todosArray.length; i++) {
+  todoMaker(todosArray[i]);
 }
 
 // change todos to "done" status
