@@ -3,7 +3,6 @@ const todoList = document.querySelector("ul");
 const inputForm = document.querySelector("form");
 const taskInput = document.getElementById("todo-input");
 const clearBtn = document.getElementById("clear");
-const test = document.getElementById("test");
 
 // connecting to local storage
 const storKey = "todos";
@@ -11,12 +10,28 @@ const thing = localStorage.getItem(storKey);
 let todosArray = thing ? JSON.parse(thing) : [];
 localStorage.setItem(storKey, JSON.stringify(todosArray));
 
+// change todos to "done" status
+function makeDone(doneTask) {
+  doneTask.classList.add("done");
+}
+function makeUndone(doneTask) {
+  doneTask.classList.remove("done");
+}
+
 // inputting tasks
 function todoMaker(input) {
   let task = document.createElement("li");
   task.textContent = input;
   task.classList.add("list-group-item");
   todoList.appendChild(task);
+  task.addEventListener("click", function () {
+    console.log("clicked");
+    if (task.classList.contains("done")) {
+      makeUndone(task);
+    } else {
+      makeDone(task);
+    }
+  });
 }
 inputForm.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -30,31 +45,6 @@ inputForm.addEventListener("submit", function (e) {
 for (let i = 0; i < todosArray.length; i++) {
   todoMaker(todosArray[i]);
 }
-
-// change todos to "done" status
-function makeDone(doneTask) {
-  doneTask.classList.add("done");
-}
-function makeUndone(doneTask) {
-  doneTask.classList.remove("done");
-}
-document.querySelectorAll(".list-group-item").forEach((item) => {
-  item.addEventListener("click", function () {
-    if (item.classList.contains("done")) {
-      makeUndone(item);
-    } else {
-      makeDone(item);
-    }
-  });
-});
-
-// remove just one todo
-// todo.addEventListener("click", function() {
-//   removeToDo();
-// });
-// function removeToDo(todo) {
-//   todoList.removeChild(todo);
-// }
 
 // clear all button
 clearBtn.addEventListener("click", function () {
