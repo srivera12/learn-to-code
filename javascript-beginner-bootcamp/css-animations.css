@@ -1,0 +1,198 @@
+body {
+    padding: 50px;
+    background-color: #777;
+}
+
+.container {
+    margin: 50px 0;
+    height: 300px;
+    text-align: center;
+    border: 5px solid black;
+}
+
+
+/* FLYING BROOM ANIMATION */
+
+#broom-container {
+    background-color: darkblue;
+}
+
+#broom {
+    margin-top: 50px;
+    animation-name: fly;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+
+/* THE BLUE DOT ANIMATIONS */
+
+#dot-container {
+    background-color: white;
+}
+
+#dot-container h1 {
+    margin-top: 50px;
+    animation-name: title-drop;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes title-drop {
+    0% {
+        transform: translateY(-100px);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#dot-container img {
+    width: 100px;
+    animation-name: dot-fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dot-fade {
+    0% {
+        opacity: 1;
+    }
+    10% {
+       opacity: 0.8;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    30%{
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0;
+    }
+    60% {
+       opacity: 0.2;
+    }
+    70% {
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#dot-container p {
+    animation-name: paragraph-slide;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes paragraph-slide {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(0);
+    }
+    70% {
+        transform: translateX(830px);
+    }
+    80% {
+        transform: translateX(830px);
+    }
+    90% {
+        transform: translateX(830px);
+    }
+    100% {
+        transform: translateX(830px);
+    }
+}
+
+
+/* CLOWN ANIMATION */
+
+#clown-container {
+    background-color: skyblue;
+}
+
+#clown-container img {
+    margin-top: 80px;
+}
+
+#clown-container img:hover {
+    transform: scale3d(1.2, 1.2, 1) rotate(45deg)
+}
+
+
+/* BOX ANIMATION */
+
+#box-container {
+    background-color: #222;
+}
+
+.box {
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    margin: 12px;
+    transition: width 2s;
+}
+
+#base-box:hover {
+    width: 300px;
+    transition-timing-function: linear;
+}
+
+#slow-fast-slow-box:hover {
+    width: 300px;
+    transition-timing-function: ease;
+}
+
+#slow-fast-box:hover {
+    width: 300px;
+    transition-timing-function: ease-in;
+}
+
+#fast-slow-box:hover {
+    width: 300px;
+    transition-timing-function: ease-out;
+}
