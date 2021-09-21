@@ -9,9 +9,11 @@ function newQuote() {
     .then(function (response) {
       return response.json();
     })
-    .then(function (data) {
-      displayQuote(data.quotes[0].text);
-      displayQuoter(data.quotes[0].author);
+    .then(function ({quotes}) {
+      const [quote] = quotes;
+      const {text, author} = quote
+      displayQuote(text);
+      displayQuoter(author);
     })
     .catch(function () {
       alert("An error occurred");
