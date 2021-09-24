@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Color Spectrum Refactor</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      const colors = [
+        { id: 1, name: 'red', color: 'red' },
+        { id: 2, name: 'orange', color: 'orange' },
+        { id: 3, name: 'yellow', color: 'yellow' },
+        { id: 4, name: 'green', color: 'green' },
+        { id: 5, name: 'blue', color: 'blue' },
+        { id: 6, name: 'indigo', color: 'indigo' },
+        { id: 7, name: 'violet', color: 'violet' },
+      ];
+      function ColorSpectrum(props) {
+        return (
+          <h1>
+            {colors.map(function (frequency) {
+              const colorStyle = {
+                height: 50,
+                width: 150,
+                backgroundColor: frequency.color,
+                marginBottom: 10,
+              };
+              return <div style={colorStyle} key={frequency.id}>{frequency.name}</div>;
+            })}
+          </h1>
+        );
+      }
+      ReactDOM.render(<ColorSpectrum colors={colors}/>, document.getElementById('app'));
+    </script>
+  </body>
+</html>

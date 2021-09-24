@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Stateless Functional Components Practice</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      // EXAMPLE VARIABLE
+      const ColorSpectrum = function () {
+        return <h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>;
+      };
+      // CHALLENGE: CREATE A COMPONENT FOR EACH COLOR OF COLORSPECTRUM
+      const Red = function () {
+        return <h1>Red</h1>;
+      };
+      const Orange = function () {
+        return <h1>Orange</h1>;
+      };
+      const Yellow = function () {
+        return <h1>Yellow</h1>;
+      };
+      const Green = function () {
+        return <h1>Green</h1>;
+      };
+      const Blue = function () {
+        return <h1>Blue</h1>;
+      };
+      const Indigo = function () {
+        return <h1>Indigo</h1>;
+      };
+      const Violet = function () {
+        return <h1>Violet</h1>;
+      };
+      ReactDOM.render(
+        // EXAMPLE RENDER PARAMETERS
+        // <ColorSpectrum/>,
+        // document.getElementById("app")
+        // CHALLENGE RENDER PARAMETERS
+        <div>
+          <Red />
+          <Orange />
+          <Yellow />
+          <Green />
+          <Blue />
+          <Indigo />
+          <Violet />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

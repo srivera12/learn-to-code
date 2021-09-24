@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Iterating Through Lists</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      // ORIGINAL COMPONENT:
+      //   function FamilyList(props) {
+      //       const sibs = props.siblings;
+      //       const sibsListItem = sibs.map(function (person) {
+      //           return <div key={person.id}>{person.name}</div>;
+      //         });
+      //         return <div>{sibsListItem}</div>;
+      //     }
+
+      // REFACTORED COMPONENT:
+      // function FamilyList(props) {
+      //     return (
+      //         <div>{props.siblings.map(function(person){
+      //             return(<div key={person.id}>{person.name}</div>)
+      //         })}</div>
+      //     )
+      // }
+
+      // FILTERED LIST:
+      function FamilyList(props) {
+        const femaleSiblings = props.siblings
+          .filter(function (person) {
+            return person.female;
+          })
+          .map(function (person) {
+            return <div key={person.id}>{person.name}</div>;
+          });
+        const maleSiblings = props.siblings
+          .filter(function (person) {
+            return !person.female;
+          })
+          .map(function (person) {
+            return <div key={person.id}>{person.name}</div>;
+          });
+        return (
+          <div>
+            <h1>Female Siblings</h1>
+            <div>{femaleSiblings}</div>
+            <hr />
+            <div>{maleSiblings}</div>
+          </div>
+        );
+      }
+
+      const siblings = [
+        { id: 1, name: 'Chris', female: false },
+        { id: 2, name: 'Jeff', female: false },
+        { id: 3, name: 'Julie', female: true },
+        { id: 4, name: 'Jessica', female: true },
+      ];
+      ReactDOM.render(<FamilyList siblings={siblings} />, document.getElementById('app'));
+    </script>
+  </body>
+</html>

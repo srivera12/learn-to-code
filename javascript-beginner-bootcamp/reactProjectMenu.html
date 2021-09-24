@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>FriendLy</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      // <FriendLy/> COMPLEX COMPONENT
+      function FriendLy() {
+        const friendlyStyle = {
+          height: 300,
+          width: 200,
+          padding: 0,
+          backgroundColor: "#fff",
+          WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+          filter: "drop-shadow(0px 0px 5px #555)",
+        };
+        return (
+          <div style={friendlyStyle}>
+            <Avatar />
+            <UserName />
+            <GetConnected />
+          </div>
+        );
+      }
+      // <Avatar/> COMPONENT
+      function Avatar() {
+        const avatarStyle = {
+          marginLeft: 25,
+          marginTop: 20,
+          width: 150,
+          height: 150,
+          borderRadius: "50%",
+        };
+        return <img style={avatarStyle} src="me.jpg" />;
+      }
+      // <UserName/> COMPONENT
+      function UserName() {
+        const nameStyle = {
+          fontSize: 24,
+          fontFamily: "Arial, Helvetica, sans-serif",
+          margin: 20,
+        };
+        return <h1 style={nameStyle}>Sarah Rivera</h1>;
+      }
+      // <GetConnected/> COMPLEX COMPONENT
+      function GetConnected() {
+        return (
+          <div>
+            <Like />
+            <Share />
+            <Add />
+          </div>
+        );
+      }
+      const iconStyle = {
+        margin: 20,
+        width: 25,
+      };
+      // <Like/> COMPONENT
+      function Like() {
+        return <img style={iconStyle} src="like.png" />;
+      }
+      // <Share/> COMPONENT
+      function Share() {
+        return <img style={iconStyle} src="share.png" />;
+      }
+      // <Add/> COMPONENT
+      function Add() {
+        return <img style={iconStyle} src="add.png" />;
+      }
+      ReactDOM.render(<FriendLy />, document.getElementById("app"));
+    </script>
+  </body>
+</html>

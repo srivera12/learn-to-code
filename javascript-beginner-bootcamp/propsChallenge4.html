@@ -1,0 +1,46 @@
+<!-- pass props from parent component to child component: firstname, lastname, fullname, profile with stateless functions-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Props Challenge: Social Media Parent > Child Stateless</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      const FirstName = function(props) {
+          return <h1>{props.firstName}</h1>;
+      }
+      const LastName = function(props) {
+          return <h1>{props.lastName}</h1>;
+      }
+      const Profile = function(props) {
+          return <img src={props.pic} />;
+      }
+      const FullName = function(props) {
+          return (
+            <div>
+              <FirstName firstName={props.firstName}/>
+              <LastName lastName={props.lastName}/>
+              <Profile pic={props.pic}/>
+            </div>
+          );
+      }
+      ReactDOM.render(
+        <FullName firstName="Sarah" lastName="Rivera" pic="me.jpg" />,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

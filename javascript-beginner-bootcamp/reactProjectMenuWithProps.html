@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>FriendLy</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      // <FriendLy/> COMPLEX COMPONENT
+      function FriendLy(props) {
+        const friendlyStyle = {
+          display: "inline-block",
+          margin: 20,
+          height: 300,
+          width: 200,
+          padding: 0,
+          backgroundColor: "#fff",
+          WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+          filter: "drop-shadow(0px 0px 5px #555)",
+        };
+        return (
+          <div style={friendlyStyle}>
+            <Avatar pic={props.pic} />
+            <UserName name={props.name} />
+            <GetConnected />
+          </div>
+        );
+      }
+      // <Avatar/> COMPONENT
+      function Avatar(props) {
+        const avatarStyle = {
+          marginLeft: 25,
+          marginTop: 20,
+          width: 150,
+          height: 150,
+          borderRadius: "50%",
+        };
+        return <img style={avatarStyle} src={props.pic} />;
+      }
+      // <UserName/> COMPONENT
+      function UserName(props) {
+        const nameStyle = {
+          fontSize: 24,
+          fontFamily: "Arial, Helvetica, sans-serif",
+          margin: 20,
+        };
+        return <h1 style={nameStyle}>{props.name}</h1>;
+      }
+      // <GetConnected/> COMPLEX COMPONENT
+      function GetConnected() {
+        return (
+          <div>
+            <Like />
+            <Share />
+            <Add />
+          </div>
+        );
+      }
+      const iconStyle = {
+        margin: 20,
+        width: 25,
+      };
+      // <Like/> COMPONENT
+      function Like() {
+        return <img style={iconStyle} src="like.png" />;
+      }
+      // <Share/> COMPONENT
+      function Share() {
+        return <img style={iconStyle} src="share.png" />;
+      }
+      // <Add/> COMPONENT
+      function Add() {
+        return <img style={iconStyle} src="add.png" />;
+      }
+      ReactDOM.render(
+        <div>
+          <FriendLy name="Sarah Rivera" pic="me.jpg" />
+          <FriendLy
+            name="John Doe"
+            pic="https://images.unsplash.com/photo-1500048993953-d23a436266cf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Jane Doe"
+            pic="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+          />
+          <FriendLy
+            name="Lucy Brown"
+            pic="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Jack Rodriguez"
+            pic="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Sophie Williams"
+            pic="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Samuel Johnson"
+            pic="https://images.unsplash.com/photo-1504593811423-6dd665756598?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="William Brown"
+            pic="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Emily Garcia"
+            pic="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Daniel Garcia"
+            pic="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+          <FriendLy
+            name="Charlotte Rodriguez"
+            pic="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          />
+        </div>,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

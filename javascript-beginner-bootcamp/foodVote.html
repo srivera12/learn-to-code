@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Food Vote</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      class DinnerVote extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            count: 0,
+          };
+        }
+        onButtonAdd() {
+          this.setState({
+            count: this.state.count + 1,
+          });
+        }
+        onButtonSub() {
+          this.setState({
+            count: this.state.count - 1,
+          });
+        }
+        render() {
+          const dinnerVoteStyle = {
+            display: 'inline-block',
+            textAlign: 'center',
+            margin: 20,
+            height: 500,
+            width: 300,
+            padding: 0,
+            backgroundColor: '#fff',
+            WebkitFilter: 'drop-shadow(0px 0px 5px #555)',
+            filter: 'drop-shadow(0px 0px 5px #555)',
+          };
+          const dinnerImgStyle = {
+            height: 200,
+            width: 200,
+            marginTop: 20,
+          };
+          return (
+            <div style={dinnerVoteStyle}>
+              <img style={dinnerImgStyle} src={this.props.img} alt="food image" />
+              <h3>Dinner Time</h3>
+              <p>Vote Here If You Want This</p>
+              <button onClick={() => this.onButtonAdd()}>+1</button>
+              <p>Vote Here If You Do Not Want This</p>
+              <button onClick={() => this.onButtonSub()}>-1</button>
+              <h5>Total: {this.state.count}</h5>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <div>
+          <DinnerVote img="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+          <DinnerVote img="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+          <DinnerVote img="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+        </div>,
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>

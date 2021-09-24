@@ -1,0 +1,42 @@
+<!-- BOILER PLATE CODE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BRINGING IN REACT LIBRARY -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <!-- BRINGING IN REACT DOM LIBRARY -->
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- BRINGING IN BABEL LIBRARY -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">React has not rendered yet.</div>
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+      // CREATE VARIABLES FOR JSX AND LOCATION
+      // VARIABLE FOR JSX
+      let what = <h1>Hello World!</h1>;
+      // VARIABLE FOR LOCATION
+      const where = document.getElementById("app");
+
+      // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS (REACT WHAT, REACT WHERE)
+      ReactDOM.render(
+        // REACT WHAT - JSX
+        what,
+        // REACT WHERE - DIV WITH ID OF "APP"
+        where
+      );
+    </script>
+  </body>
+</html>

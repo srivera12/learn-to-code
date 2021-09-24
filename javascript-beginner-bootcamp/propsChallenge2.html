@@ -1,0 +1,39 @@
+<!-- render your name, age and a social media icon, this time with class components -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Props Challenge: Social Media Class Components</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      class Social extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Hi, my name is {this.props.name}.</h1>
+              <p>My age is: {this.props.age}</p>
+              <img src={this.props.pic} />
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(
+        <Social name="Sarah" age="26" pic="me.jpg" />,
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>

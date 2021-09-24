@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Guess My Age</title>
+  </head>
+  <body>
+    <div id="app">React has not rendered yet.</div>
+    <script type="text/babel">
+      class GuessAge extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            age: 'Guess My Age',
+          };
+        }
+        onButtonClick() {
+          this.setState({
+            age: '26',
+          });
+        }
+        render() {
+          return (
+            <div>
+              <h1>Guessing Game</h1>
+              <h2>{this.state.age}</h2>
+              <button onClick={() => this.onButtonClick()}>Reveal My Age</button>
+            </div>
+          );
+        }
+      }
+      ReactDOM.render(<GuessAge />, document.getElementById('app'));
+    </script>
+  </body>
+</html>

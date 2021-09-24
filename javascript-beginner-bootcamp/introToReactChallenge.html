@@ -1,0 +1,61 @@
+<!-- BOILER PLATE CODE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BRINGING IN REACT LIBRARY -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <!-- BRINGING IN REACT DOM LIBRARY -->
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- BRINGING IN BABEL LIBRARY -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">React has not rendered yet.</div>
+    <div id="p">Paragraph?</div>
+    <div id="a">Google?</div>
+    <div id="ul">List?</div>
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+      // CHALLENGE 1: RENDER PARAGRAPH WITH CONTENT "I AM A PARAGRAPH"
+      ReactDOM.render(<p>I am a paragraph!</p>, document.getElementById("p"));
+
+      // CHALLENGE 2: RENDER AN ANCHOR TAG THAT LINKS TO GOOGLE WITH THE CONTENT "VISIT GOOGLE"
+      ReactDOM.render(
+        <a href="https://www.google.com" target="_blank">
+          Visit Google
+        </a>,
+        document.getElementById("a")
+      );
+
+      // CHALLENGE 3: RENDER AN UN-ORDERED LIST AND INPUT 3 THINGS YOU NEED TO DO TODAY
+
+      ReactDOM.render(
+        <ul>
+          <li>React Work</li>
+          <li>ToDo Tracker Improvements</li>
+          <li>Website Styling Fixes</li>
+        </ul>,
+        document.getElementById("ul")
+      );
+
+      // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS
+      ReactDOM.render(
+        // REACT WHAT - JSX
+        <h1>Hello World</h1>,
+        // REACT WHERE - DIV WITH ID OF "APP"
+        document.getElementById("app")
+      );
+    </script>
+  </body>
+</html>
