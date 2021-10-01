@@ -1,0 +1,128 @@
+body {
+  background-color: #064273;
+  color: #d3f3f6;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#nav {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#nav ul {
+  padding-inline-start: 0;
+}
+
+#nav ul li {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 10px;
+}
+
+#nav ul li a {
+  line-height: 3.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+}
+
+#banner {
+  margin: 0 auto 100px auto;
+  width: 90%;
+  padding: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7fcdff;
+}
+
+#banner h1 {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 20px;
+  font-size: 150px;
+  letter-spacing: 3px;
+  border-radius: 50%;
+  border: 10px solid #76b6c4;
+}
+
+#banner h3 {
+  letter-spacing: -1px;
+  font-size: 30px;
+}
+
+#main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-foam {
+  width: 100%;
+  background-color: #76b6c4;
+  padding: 150px 10px;
+  margin: 0;
+}
+
+.section-blue {
+  width: 100%;
+  background-color: #1da2d8;
+  padding: 150px 10px;
+  margin: 0;
+}
+
+h2 {
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  letter-spacing: -5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 80px 50px 10px 30px;
+  border-radius: 50%;
+  border: 10px solid #7fcdff;
+}
+
+#main p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.dark-blue {
+  color: #064273;
+}
+
+.sea-foam {
+  color: #76b6c4;
+}
+
+.circle-dark-blue {
+  width: 90px;
+  height: 45px;
+  margin: 0 47.5% -45px 47.5%;
+  border-radius: 90px 90px 0 0;
+  transform: rotate(180deg) scaleX(-1);
+  background-color: #064273;
+}
+
+.circle-sea-foam {
+  width: 90px;
+  height: 45px;
+  margin: 0 47.5% -45px 47.5%;
+  border-radius: 90px 90px 0 0;
+  transform: rotate(180deg) scaleX(-1);
+  background-color: #76b6c4;
+}
+
+.circle-light-blue {
+  width: 90px;
+  height: 45px;
+  margin: 0 47.5% -45px 47.5%;
+  border-radius: 90px 90px 0 0;
+  transform: rotate(180deg) scaleX(-1);
+  background-color: #1da2d8;
+}

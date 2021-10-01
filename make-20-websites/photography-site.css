@@ -1,0 +1,181 @@
+body {
+  background-color: #036603;
+  color: #eaeaea;
+  font-family: 'Abel' sans-serif;
+  font-size: 20px;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  color: #ddd;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+hr {
+  height: 30px;
+  border-style: solid;
+  border-color: yellow;
+  border-width: 1px 0 0 0;
+}
+
+/* hr::after {
+    content: '♔';
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background-color: rgba(254, 254, 254, 1);
+  } */
+
+#logo h1 {
+  font-size: 7em;
+  line-height: 150px;
+  width: 100%;
+  font-family: 'Lucida Bright', Georgia, serif;
+  padding: 100px 10px 10px 10px;
+}
+
+#logo h2 {
+  font-family: sans-serif;
+  padding-bottom: 100px;
+  font-size: 2em;
+}
+
+/* .left {
+    width: 50%;
+    margin: 0 auto 0 150px;
+    text-align: left;
+  }
+  
+  .center {
+    text-align: center;
+    font-size: 200px;
+  }
+  
+  .right {
+    width: 50%;
+    margin: 0 150px 0 auto;
+    text-align: right;
+  } */
+
+h2 {
+  font-size: 2.21em;
+  font-family: 'Courier Bold', Courier, monospace;
+}
+
+.text-content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+#text-section-top {
+  margin-bottom: 100px;
+}
+
+#text-section-bottom {
+  margin-top: 100px;
+}
+
+.three-columns {
+  display: flex;
+  padding: 10px;
+  width: 90%;
+  margin: 50px auto;
+}
+
+.column {
+  display: inline-block;
+  width: 33%;
+  border: 3px solid yellowgreen;
+  margin: 0 50px;
+  height: 500px;
+}
+
+.column img:hover {
+  filter: grayscale(0);
+}
+
+.column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.green:hover {
+  border: 3px solid #13ca91;
+}
+
+.brightgreen:hover {
+  border: 3px solid #7fff00;
+}
+
+.red:hover {
+  border: 3px solid #f21a1d;
+}
+
+.pinkpurple:hover {
+  border: 3px solid #b537f2;
+}
+
+.blue:hover {
+  border: 3px solid #79fffe;
+}
+
+.yellowgreen:hover {
+  border: 3px solid #d9eb4b;
+}
+
+.orange:hover {
+  border: 3px solid #fe6b35;
+}
+
+.darkpurple:hover {
+  border: 3px solid #04005e;
+}
+
+.pink:hover {
+  border: 3px solid #fb33db;
+}
+
+/* #img-1:hover {
+    border: 3px solid #5c8e27;
+}
+
+#img-2:hover {
+    border: 3px solid ;
+}
+
+#img-3:hover {
+    border: 3px solid ;
+}
+
+#img-4:hover {
+    border: 3px solid ;
+}
+
+#img-5:hover {
+    border: 3px solid ;
+}
+
+#img-6:hover {
+    border: 3px solid ;
+}
+
+#img-7:hover {
+    border: 3px solid ;
+}
+
+#img-8:hover {
+    border: 3px solid ;
+}
+
+#img-9:hover {
+    border: 3px solid ;
+} */

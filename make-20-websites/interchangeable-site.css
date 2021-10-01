@@ -1,0 +1,88 @@
+body {
+  background-color: #096569;
+  color: #000;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+#page {
+  background-image: url(https://images.unsplash.com/photo-1570295096277-18617b2badc8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: fit-content;
+  padding: 200px 0;
+}
+
+h1,
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  color: #00ffdd;
+  text-align: center;
+}
+
+h2 {
+  color: #07a6ad;
+  text-align: left;
+}
+
+#header {
+  padding: 100px 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#logo h1 {
+  line-height: 150px;
+  width: 100%;
+  font-size: 7.5em;
+  letter-spacing: 7px;
+}
+
+.section-content {
+  margin: 0;
+  margin-left: 0;
+  background-color: #eaeaea;
+  padding: 10px;
+}
+
+.image-content {
+  margin: 0;
+  margin-left: 0;
+  padding: 300px 50px;
+  height: fit-content;
+  text-align: center;
+  color: #fff;
+}
+
+.image-content h2 {
+    text-align: center;
+    color: #00ffdd;
+}
+
+.image-content .image-text {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+#image-1 {
+  background-image: url(https://images.unsplash.com/photo-1598707630720-eb08ef27bc11?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#image-2 {
+  background-image: url(https://images.unsplash.com/photo-1488375634201-b85b28653a79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1429&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#image-3 {
+  background-image: url(https://images.unsplash.com/photo-1559552440-8e17304991e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

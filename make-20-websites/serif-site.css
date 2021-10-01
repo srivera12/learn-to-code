@@ -1,0 +1,72 @@
+body {
+  background-color: rgba(254, 254, 254, 1);
+  color: #222;
+  font-family: 'Book Antiqua';
+  font-size: 20px;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  color: #111;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: medium double #444;
+  color: #111;
+  text-align: center;
+}
+
+hr::after {
+  content: '♔';
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background-color: rgba(254, 254, 254, 1);
+}
+
+#logo {
+  margin-bottom: 150px;
+  padding: 30px;
+  line-height: 100px auto;
+  width: 100% auto;
+  font-size: 2em;
+  font-stretch: extra-condensed;
+  letter-spacing: -1px;
+  font-family: 'Palatino';
+}
+
+.left {
+  width: 50%;
+  margin: 0 auto 0 150px;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+  font-size: 200px;
+}
+
+.right {
+  width: 50%;
+  margin: 0 150px 0 auto;
+  text-align: right;
+}
+
+h2 {
+  font-size: 2em;
+  font-stretch: ultra-condensed;
+  letter-spacing: -1px;
+}
+
+.section-content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}

@@ -1,0 +1,65 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1596151226641-3bf476a05146?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  color: #fff;
+}
+
+h1,
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  color: #ff00b3;
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+#header {
+  width: 1000px;
+  margin: 120px auto;
+}
+
+#logo h1 {
+  line-height: 150px;
+  letter-spacing: 5px;
+  font-size: 10em;
+}
+
+#three-columns {
+  overflow: hidden;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#three-columns h2 {
+  padding: 10px 9px 20px 0;
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+
+#three-columns #column-1 {
+  float: left;
+  width: 300px;
+  margin-right: 50px;
+}
+
+#three-columns #column-2 {
+  float: left;
+  width: 300px;
+}
+
+#three-columns #column-3 {
+  float: right;
+  width: 300px;
+}

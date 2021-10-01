@@ -1,0 +1,133 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1450&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#nav ul {
+  padding-inline-start: 0;
+}
+
+#nav ul li {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 10px;
+}
+
+#nav ul li a {
+  line-height: 3.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+}
+
+.grey {
+    color: #999;
+}
+
+#banner {
+    margin: 0 auto 100px auto;
+    width: 90%;
+    padding: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+#banner h1 {
+    margin: 0;
+    display: inline-block;
+    padding: 20px;
+    font-size: 150px;
+    letter-spacing: 3px;
+}
+
+.clear {
+    color: transparent;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 5px;
+}
+
+#banner h3 {
+    letter-spacing: -1px;
+    font-size: 30px;
+    color: transparent;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 1px;
+}
+
+#main {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(252, 252, 252, 0.2);
+    border-radius: 10px;
+}
+
+.section-grey {
+    background-color: #444;
+    padding: 40px 10px;
+    margin: 0;
+}
+
+.section-blue {
+    background-color: navy;
+    padding: 40px 10px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.triangle-down-grey {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0 42%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #444;
+}
+
+.triangle-up-grey {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -50px 42%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #444;
+}
+
+.triangle-down-blue {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0 42%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid navy;
+}
+
+.triangle-up-blue {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -50px 42%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid navy;
+}

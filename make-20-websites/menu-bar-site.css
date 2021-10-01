@@ -1,0 +1,131 @@
+body {
+  margin: 0 0 10px 0;
+  background-color: #e3e042;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  font-weight: 300;
+  color: #777;
+}
+
+#nav {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#nav > ul {
+  padding-inline-start: 0;
+}
+
+#nav > ul > li {
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 10px;
+}
+
+#nav > ul > li > a {
+  color: #444;
+  line-height: 3.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* what the actual what
+#nav > ul > li > ul {
+    display: none;
+} */
+
+#banner {
+  margin: 0 auto;
+  width: 90%;
+  padding: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#banner h2 {
+  margin: 0;
+  display: inline-block;
+  padding: 60px;
+  font-size: 5em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 5px;
+  background-color: goldenrod;
+  color: #eaeaea;
+}
+
+#banner h3 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+#banner p {
+  text-align: center justify;
+  margin: 0 auto;
+  font-size: 15px;
+}
+
+#columns {
+  background-color: #eaeaea;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  width: 80%;
+  margin: 50px auto 0 auto;
+}
+
+#columns h2 {
+  font-size: initial;
+  padding: 10px;
+  display: block;
+}
+
+i {
+    margin: 0 auto;
+    display: block;
+    color: gold;
+  }
+
+.column {
+  width: 30%;
+  margin: 0 20px;
+}
+
+.column p {
+    text-align: justify;
+}
+
+.section-background {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: goldenrod;
+  color: #eaeaea;
+}
+
+.section {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+span {
+  padding: 5px;
+}
+
+.gold {
+  background-color: goldenrod;
+  color: #eaeaea;
+}
+
+.gold-font {
+  color: goldenrod;
+}
+
+.yellow {
+  background-color: #e3e042;
+  color: #777;
+}

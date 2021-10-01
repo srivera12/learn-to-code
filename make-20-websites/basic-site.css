@@ -1,0 +1,48 @@
+body {
+    background-color: #fff;
+    font-family: "Abel", sans-serif;
+    font-size: 20px;
+    color: #3b3b3b;
+}
+
+h1, h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    color: #111;
+}
+
+#logo h1 {
+    line-height: 150px;
+    letter-spacing: 3px;
+    font-size: 3em;
+}
+
+#header-page {
+    overflow: hidden;
+    height: 600px;
+}
+
+#header {
+    overflow: hidden;
+    width: 1000px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#banner {
+    margin: 0;
+    width: 50%;
+    height: 450px;
+}
+
+#three-columns {
+    display: flex;
+}
+
+.column {
+    margin: 10px;
+}
