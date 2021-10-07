@@ -1,9 +1,9 @@
 // imports
-import { AverageGoalsAnalysis } from './Analyzers/AverageGoalsAnalysis';
-import { ConsoleReport } from './OutputTargets/ConsoleReport';
-import { HTMLReport } from './OutputTargets/HTMLReport';
+import { AverageGoalsAnalysis } from './analyzers/AverageGoalsAnalysis';
+import { ConsoleReport } from './output-targets/ConsoleReport';
+import { HTMLReport } from './output-targets/HTMLReport';
 import { MatchData } from './MatchData';
-import { WinsAnalysis } from './Analyzers/WinsAnalysis';
+import { WinsAnalysis } from './analyzers/WinsAnalysis';
 
 // necessary interfaces
 export interface Analyzer {
