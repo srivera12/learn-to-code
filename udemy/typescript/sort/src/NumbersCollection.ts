@@ -1,8 +1,8 @@
 // import 'Sortable'
-import { Sortable, Sorter } from './Sorter';
+import { Sorter } from './Sorter';
 
 // if the thing to be sorted is an array of numbers
-export class NumbersCollection extends Sorter implements Sortable {
+export class NumbersCollection extends Sorter {
   constructor(public data: number[]) {
     super();
   }

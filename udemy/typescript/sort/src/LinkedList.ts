@@ -1,5 +1,5 @@
 // import 'Sortable'
-import { Sortable, Sorter } from './Sorter';
+import { Sorter } from './Sorter';
 
 // creating the nodes
 class Node {
@@ -8,8 +8,7 @@ class Node {
 }
 
 // the linked list itself
-export class LinkedList extends Sorter implements Sortable {
-  // seems to assume a lot of linked list knowledge - I followed what was happening but not why
+export class LinkedList extends Sorter {
   head: Node | null = null;
   add(data: number): void {
     const node = new Node(data);
@@ -56,6 +55,7 @@ export class LinkedList extends Sorter implements Sortable {
     }
     return this.at(leftIndex).data > this.at(rightIndex).data;
   }
+  // just changing the next, and reassigning head
   swap(leftIndex: number, rightIndex: number): void {
     const leftNode = this.at(leftIndex);
     const rightNode = this.at(rightIndex);
