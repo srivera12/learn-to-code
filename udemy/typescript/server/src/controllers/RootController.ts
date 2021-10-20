@@ -14,11 +14,11 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
 }
 
 // root controller class
-@controller('')
+@controller()
 class RootController {
   @get('/')
   getRoot(req: Request, res: Response) {
-    if (req.session && req.session.loggedIn) {
+    if (req.session?.loggedIn) {
       res.send(
         `
           <div>

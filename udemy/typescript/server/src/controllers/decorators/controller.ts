@@ -23,7 +23,7 @@ function bodyValidators(keys: string): RequestHandler {
 }
 
 // decorator function to get full path
-export function controller(routePrefix: string) {
+export function controller(routePrefix: string = '') {
   return function (target: Function) {
     const router = AppRouter.getInstance();
     for (let key in target.prototype) {
