@@ -1,0 +1,12 @@
+.Box-box {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.Box-button {
+  margin: 0 20px;
+  background-color: #666;
+  color: #fff;
+  width: 50px;
+  display: inline-block;
+}
