@@ -116,7 +116,7 @@ class Game extends Component {
 
   render() {
     const { scores, isOver, dice, locked, isRolling, rollsLeft } = this.state;
-    if (Object.values(scores).filter((val) => typeof val === 'number').length === 13 && isOver === false) {
+    if (isOver === false && Object.values(scores).filter((val) => Number.isInteger(val)).length === 13) {
       this.setOver();
     }
     return (

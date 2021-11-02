@@ -47,42 +47,42 @@ class ScoreTable extends Component {
                 desc={ones.description}
                 score={scores.ones}
                 doScore={(evt) => doScore('ones', ones.evalRoll)}
-                beenClicked={typeof scores.ones === 'number' ? true : false}
+                beenClicked={typeof scores.ones === 'number'}
               />
               <RuleRow
                 name="Twos"
                 desc={twos.description}
                 score={scores.twos}
                 doScore={(evt) => doScore('twos', twos.evalRoll)}
-                beenClicked={typeof scores.twos === 'number' ? true : false}
+                beenClicked={typeof scores.twos === 'number'}
               />
               <RuleRow
                 name="Threes"
                 desc={threes.description}
                 score={scores.threes}
                 doScore={(evt) => doScore('threes', threes.evalRoll)}
-                beenClicked={typeof scores.threes === 'number' ? true : false}
+                beenClicked={typeof scores.threes === 'number'}
               />
               <RuleRow
                 name="Fours"
                 desc={fours.description}
                 score={scores.fours}
                 doScore={(evt) => doScore('fours', fours.evalRoll)}
-                beenClicked={typeof scores.fours === 'number' ? true : false}
+                beenClicked={typeof scores.fours === 'number'}
               />
               <RuleRow
                 name="Fives"
                 desc={fives.description}
                 score={scores.fives}
                 doScore={(evt) => doScore('fives', fives.evalRoll)}
-                beenClicked={typeof scores.fives === 'number' ? true : false}
+                beenClicked={typeof scores.fives === 'number'}
               />
               <RuleRow
                 name="Sixes"
                 desc={sixes.description}
                 score={scores.sixes}
                 doScore={(evt) => doScore('sixes', sixes.evalRoll)}
-                beenClicked={typeof scores.sixes === 'number' ? true : false}
+                beenClicked={typeof scores.sixes === 'number'}
               />
             </tbody>
           </table>
@@ -96,49 +96,49 @@ class ScoreTable extends Component {
                 desc={threeOfKind.description}
                 score={scores.threeOfKind}
                 doScore={(evt) => doScore('threeOfKind', threeOfKind.evalRoll)}
-                beenClicked={typeof scores.threeOfKind === 'number' ? true : false}
+                beenClicked={typeof scores.threeOfKind === 'number'}
               />
               <RuleRow
                 name="Four of Kind"
                 desc={fourOfKind.description}
                 score={scores.fourOfKind}
                 doScore={(evt) => doScore('fourOfKind', fourOfKind.evalRoll)}
-                beenClicked={typeof scores.fourOfKind === 'number' ? true : false}
+                beenClicked={typeof scores.fourOfKind === 'number'}
               />
               <RuleRow
                 name="Full House"
                 desc={fullHouse.description}
                 score={scores.fullHouse}
                 doScore={(evt) => doScore('fullHouse', fullHouse.evalRoll)}
-                beenClicked={typeof scores.fullHouse === 'number' ? true : false}
+                beenClicked={typeof scores.fullHouse === 'number'}
               />
               <RuleRow
                 name="Small Straight"
                 desc={smallStraight.description}
                 score={scores.smallStraight}
                 doScore={(evt) => doScore('smallStraight', smallStraight.evalRoll)}
-                beenClicked={typeof scores.smallStraight === 'number' ? true : false}
+                beenClicked={typeof scores.smallStraight === 'number'}
               />
               <RuleRow
                 name="Large Straight"
                 desc={largeStraight.description}
                 score={scores.largeStraight}
                 doScore={(evt) => doScore('largeStraight', largeStraight.evalRoll)}
-                beenClicked={typeof scores.largeStraight === 'number' ? true : false}
+                beenClicked={typeof scores.largeStraight === 'number'}
               />
               <RuleRow
                 name="Yahtzee"
                 desc={yahtzee.description}
                 score={scores.yahtzee}
                 doScore={(evt) => doScore('yahtzee', yahtzee.evalRoll)}
-                beenClicked={typeof scores.yahtzee === 'number' ? true : false}
+                beenClicked={typeof scores.yahtzee === 'number'}
               />
               <RuleRow
                 name="Chance"
                 desc={chance.description}
                 score={scores.chance}
                 doScore={(evt) => doScore('chance', chance.evalRoll)}
-                beenClicked={typeof scores.chance === 'number' ? true : false}
+                beenClicked={typeof scores.chance === 'number'}
               />
             </tbody>
           </table>
