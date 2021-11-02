@@ -34,9 +34,9 @@ class Die extends Component {
     }
     return (
       <i
-        className={`Die fas fa-${dieRoll} ${isRolling && !locked ? 'Die-rolling' : null} ${
-          locked ? 'Die-locked' : null
-        } fa-4x`}
+        className={`Die fas fa-${isRolling && !locked ? 'square' : dieRoll} ${
+          isRolling && !locked ? 'Die-rolling' : null
+        } ${locked ? 'Die-locked' : null} fa-4x`}
         onClick={this.lockDie}
       ></i>
     );
