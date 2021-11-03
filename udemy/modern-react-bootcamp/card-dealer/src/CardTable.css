@@ -1,0 +1,35 @@
+.CardTable {
+  font-family: 'Slabo 27px';
+}
+
+.CardTable-title {
+  color: azure;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.CardTable-card-area {
+  margin-top: 80px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.CardTable-btn {
+  background-color: transparent;
+  border: 2px solid;
+  outline: none;
+  font: inherit;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: #009688;
+  transition: 0.25s;
+}
+
+.CardTable-btn:hover {
+  border-color: #4caf50;
+  color: white;
+  box-shadow: inset 0 0 0 2em #4caf50;
+}
