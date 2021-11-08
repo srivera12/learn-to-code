@@ -1,0 +1,12 @@
+.NavBar {
+  background-color: rgba(69, 90, 100, 1);
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.NavBar-link {
+  color: white;
+  text-decoration: none;
+}

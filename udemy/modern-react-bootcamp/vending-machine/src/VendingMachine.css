@@ -1,0 +1,14 @@
+.VendingMachine {
+  text-align: center;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center center;
+  background-image: url(https://images.unsplash.com/photo-1575224526797-5730d09d781d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1480&q=80);
+}
