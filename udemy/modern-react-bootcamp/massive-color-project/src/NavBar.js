@@ -8,18 +8,20 @@ import { Link } from 'react-router-dom';
 
 class NavBar extends Component {
   render() {
-    const { level, changeLevel, changeFormat, colorFormat, snackOpen, closeSnackbar } = this.props;
+    const { level, changeLevel, changeFormat, colorFormat, snackOpen, closeSnackbar, showLevel } = this.props;
     return (
       <header className="NavBar">
         <div className="logo">
           <Link to="/">HOME</Link>
         </div>
-        <div className="slider-container">
-          <span>Level: {level}</span>
-          <div className="slider">
-            <Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={changeLevel} />
+        {showLevel ? (
+          <div className="slider-container">
+            <span>Level: {level}</span>
+            <div className="slider">
+              <Slider defaultValue={level} min={100} max={900} step={100} onAfterChange={changeLevel} />
+            </div>
           </div>
-        </div>
+        ) : null}
         <div className="select-container">
           <Select onChange={changeFormat} value={colorFormat}>
             <MenuItem value="hex">HEX - #ffffff</MenuItem>

@@ -38,7 +38,7 @@ const seedColors = [
       { name: 'CrystalSeeds', color: '#a384c7' },
       { name: 'PieceOfHome', color: '#b3446e' },
       { name: 'Siblings', color: '#5f9088' },
-      { name: 'PropheticDreams', color: '#a8b8c5' },
+      { name: 'DivineIntervention', color: '#a8b8c5' },
       { name: 'Mariner', color: '#2b3353' },
       { name: 'Xhorhaus', color: '#5a495e' },
       { name: 'FlorescentFungi', color: '#c34257' },

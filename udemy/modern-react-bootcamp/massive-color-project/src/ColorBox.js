@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Link } from 'react-router-dom';
+import chroma from 'chroma-js';
+import { withStyles } from '@material-ui/styles';
 import './ColorBox.css';
+
+const styles = {
+  text: {
+    color: (props) => (chroma.contrast(props.color, 'white') < 4.5 ? 'black' : 'white'),
+  },
+};
 
 class ColorBox extends Component {
   constructor(props) {
@@ -14,10 +23,10 @@ class ColorBox extends Component {
     });
   }
   render() {
-    const { name, color } = this.props;
+    const { name, color, sourcePalette, id, showLink, classes } = this.props;
     return (
       <CopyToClipboard text={color} onCopy={this.changeCopyState}>
-        <div className="ColorBox" style={{ backgroundColor: color }}>
+        <div className={`ColorBox ${classes.text}`} style={{ backgroundColor: color }}>
           <div
             style={{ backgroundColor: color }}
             className={!this.state.isCopied ? 'copy-overlay' : 'copy-overlay show'}
@@ -30,13 +39,22 @@ class ColorBox extends Component {
             <div className="box-content">
               <span className="color-name">{name}</span>
             </div>
-            <button className="copy-button">COPY</button>
+            <button className={`copy-button ${classes.text}`}>COPY</button>
           </div>
-          <span className="see-more">MORE</span>
+          {showLink ? (
+            <Link
+              to={`/palette/${sourcePalette}/${id}`}
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
+              <span className={`see-more ${classes.text}`}>MORE</span>
+            </Link>
+          ) : null}
         </div>
       </CopyToClipboard>
     );
   }
 }
 
-export default ColorBox;
+export default withStyles(styles)(ColorBox);
