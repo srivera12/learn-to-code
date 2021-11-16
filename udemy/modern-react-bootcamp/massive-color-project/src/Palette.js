@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
 import NavBar from './NavBar';
-import './Palette.css';
+import './styles/Palette.css';
 
 class Palette extends Component {
   constructor(props) {
@@ -34,6 +34,7 @@ class Palette extends Component {
         id={color.id}
         sourcePalette={this.props.palette.id}
         showLink
+        isShade={false}
       />
     ));
     return (

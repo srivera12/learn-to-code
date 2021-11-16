@@ -39,6 +39,7 @@
 .back-button {
   height: 60px;
   text-decoration: none;
+  color: white;
 }
 
 .ColorBox:hover .copy-button {

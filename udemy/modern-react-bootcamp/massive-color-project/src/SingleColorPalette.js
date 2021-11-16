@@ -33,7 +33,7 @@ class SingleColorPalette extends Component {
     const { colorFormat, snackOpen } = this.state;
     const { paletteName, emoji } = this.props.palette;
     const shadeBoxes = this._shades.map((shade) => (
-      <ColorBox key={shade.name} color={shade[colorFormat]} name={shade.name} showLink={false} />
+      <ColorBox key={shade.name} color={shade[colorFormat]} name={shade.name} showLink={false} isShade />
     ));
     return (
       <div className="Palette SingleColorPalette">
