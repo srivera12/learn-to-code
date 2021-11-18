@@ -11,71 +11,15 @@ import DraggableColorList from './DraggableColorList';
 import { arrayMoveImmutable } from 'array-move';
 import PaletteFormNav from './PaletteFormNav';
 import ColorPickerForm from './ColorPickerForm';
-
-const drawerWidth = 350;
-
-const styles = (theme) => ({
-  root: {
-    display: 'flex',
-  },
-  hide: {
-    display: 'none',
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-  },
-  content: {
-    flexGrow: 1,
-    height: 'calc(100vh - 64px)',
-    padding: theme.spacing.unit * 3,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: -drawerWidth,
-  },
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    marginLeft: 0,
-  },
-  container: {
-    width: '90%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%',
-  },
-  buttons: {
-    width: '100%',
-  },
-  button: {
-    width: '50%',
-  },
-});
+import styles from './styles/NewPaletteFormStyles';
 
 class NewPaletteForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
+      open: true,
       colors: this.getRandomColors(10),
+      showingForm: false,
     };
   }
   handleDrawerOpen = () => {
@@ -88,11 +32,11 @@ class NewPaletteForm extends Component {
   addNewColor = (newColor) => {
     this.setState({ colors: [...this.state.colors, newColor] });
   };
-  savePalette = (newPaletteName) => {
+  savePalette = (newPaletteName, emoji) => {
     const newPalette = {
       paletteName: newPaletteName,
       id: newPaletteName.toLowerCase().replace(' ', '-'),
-      emoji: ':)',
+      emoji: emoji,
       colors: this.state.colors,
     };
     this.props.savePalette(newPalette);
@@ -126,9 +70,12 @@ class NewPaletteForm extends Component {
   clearPalette = () => {
     this.setState({ colors: [] });
   };
+  showMetaForm = () => {
+    this.setState({ showForm: true });
+  };
   render() {
     const { classes, palettes } = this.props;
-    const { open, colors } = this.state;
+    const { open, colors, showForm } = this.state;
     return (
       <div className={classes.root}>
         <PaletteFormNav
@@ -137,6 +84,8 @@ class NewPaletteForm extends Component {
           colors={colors}
           handleSubmit={this.savePalette}
           handleDrawerOpen={this.handleDrawerOpen}
+          showingForm={showForm}
+          showForm={this.showMetaForm}
         />
         <Drawer
           className={classes.drawer}

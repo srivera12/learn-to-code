@@ -8,54 +8,13 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Button from '@material-ui/core/Button';
-import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import { Link } from 'react-router-dom';
-
-const drawerWidth = 350;
-
-const styles = (theme) => ({
-  appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: '64px',
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
-  },
-  navBtns: {},
-});
+import PaletteMetaForm from './PaletteMetaForm';
+import styles from './styles/PaletteFormNavStyles';
 
 class PaletteFormNav extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      newPaletteName: '',
-    };
-  }
-  componentDidMount() {
-    ValidatorForm.addValidationRule('isPaletteNameUnique', (value) =>
-      this.props.palettes.every(({ paletteName }) => paletteName.toLowerCase() !== value.toLowerCase())
-    );
-  }
-  handleChange = (evt) => {
-    this.setState({ [evt.target.name]: evt.target.value });
-  };
   render() {
-    const { classes, open, colors, handleSubmit, handleDrawerOpen } = this.props;
-    const { newPaletteName } = this.state;
+    const { classes, open, handleSubmit, handleDrawerOpen, palettes } = this.props;
     return (
       <div className={classes.root}>
         {' '}
@@ -81,26 +40,9 @@ class PaletteFormNav extends Component {
             </Typography>
           </Toolbar>
           <div className={classes.navBtns}>
-            <ValidatorForm onSubmit={() => handleSubmit(newPaletteName)}>
-              <TextValidator
-                value={newPaletteName}
-                name="newPaletteName"
-                onChange={this.handleChange}
-                validators={['required', 'isPaletteNameUnique']}
-                errorMessages={['Palettes must have a name', 'Palette name already used']}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                type="submit"
-                disabled={colors.length < 20}
-                style={{ pointerEvents: 'auto' }}
-              >
-                Save Palette
-              </Button>
-            </ValidatorForm>
-            <Link to="/">
-              <Button variant="contained" color="secondary">
+            <PaletteMetaForm handleSubmit={handleSubmit} palettes={palettes} />
+            <Link className={classes.backButton} to="/">
+              <Button variant="contained" color="secondary" style={{ marginLeft: '0.5rem' }}>
                 Go Back
               </Button>
             </Link>
