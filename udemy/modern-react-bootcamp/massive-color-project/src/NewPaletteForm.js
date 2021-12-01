@@ -43,7 +43,9 @@ class NewPaletteForm extends Component {
     this.props.history.push('/');
   };
   deleteColorBox = (colorName) => {
-    this.setState({ colors: this.state.colors.filter((color) => color.name !== colorName) });
+    this.setState({
+      colors: this.state.colors.filter((color) => color.name !== colorName),
+    });
   };
   getRandomColors = (num) => {
     let randColors = [];
@@ -59,7 +61,10 @@ class NewPaletteForm extends Component {
   addRandColor = () => {
     const newRandColor = this.getRandomColors(1)[0];
     if (!this.state.colors.includes(newRandColor)) {
-      this.setState({ colors: [...this.state.colors, newRandColor], updating: true });
+      this.setState({
+        colors: [...this.state.colors, newRandColor],
+        updating: true,
+      });
     }
   };
   onSortEnd = ({ oldIndex, newIndex }) => {
@@ -86,6 +91,7 @@ class NewPaletteForm extends Component {
           handleDrawerOpen={this.handleDrawerOpen}
           showingForm={showForm}
           showForm={this.showMetaForm}
+          hideIcon={open}
         />
         <Drawer
           className={classes.drawer}

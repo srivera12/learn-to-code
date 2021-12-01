@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import './styles/NavBar.css';
 import CloseIcon from '@material-ui/icons/Close';
 import { Select, MenuItem, Snackbar, IconButton } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import './styles/NavBar.css';
 
 class NavBar extends Component {
   render() {

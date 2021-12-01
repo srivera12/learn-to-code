@@ -53,3 +53,44 @@
   margin-left: -7px;
   margin-top: -3px;
 }
+
+@media (max-width: 800px) {
+  .slider {
+    width: 160px;
+    margin: 0 10px;
+    display: inline-block;
+  }
+  .slider-container {
+    width: 190px;
+  }
+  .logo {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .NavBar {
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+  }
+  .logo {
+    margin-right: 2px;
+    font-size: small;
+    padding: 5px;
+  }
+  .slider {
+    width: 200px;
+    margin: 0 5px;
+    display: inline-block;
+  }
+  .slider-container {
+    width: 230px;
+    font-size: small;
+    order: 1;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .select-container {
+    margin-right: 5px;
+  }
+}
