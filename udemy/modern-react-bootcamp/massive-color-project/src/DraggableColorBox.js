@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import chroma from 'chroma-js';
+import chroma from 'chroma-js';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { withStyles } from '@material-ui/core/styles';
 import { SortableElement } from 'react-sortable-hoc';
@@ -17,9 +17,18 @@ const styles = {
       color: 'white',
       transform: 'scale(1.5)',
     },
+    '@media (max-width: 800px)': {
+      height: '15%',
+      width: '50%',
+      marginBottom: '-6px',
+    },
+    '@media (max-width: 400px)': {
+      height: '15%',
+      width: '100%',
+      marginBottom: '-6px',
+    },
   },
   boxContent: {
-    // color: (props) => (chroma.contrast(props.color, 'white') < 4.5 ? 'black' : 'white'),
     position: 'absolute',
     width: '100%',
     left: '0px',
@@ -40,8 +49,9 @@ const styles = {
 class DraggableColorBox extends Component {
   render() {
     const { color, name, classes, deleteColorBox } = this.props;
+    const textColor = chroma.contrast(color, 'white') < 4.5 ? 'black' : 'white';
     return (
-      <div className={classes.root} style={{ backgroundColor: color }}>
+      <div className={classes.root} style={{ backgroundColor: color, color: textColor }}>
         <div className={classes.boxContent}>
           <span>{name}</span>
           <DeleteIcon className={classes.deleteIcon} onClick={deleteColorBox} />

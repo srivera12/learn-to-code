@@ -6,15 +6,21 @@
 
 .Palette-colors {
   height: 90%;
+  overflow: auto;
 }
 
 .Palette-footer {
   background-color: white;
   height: 5vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   font-weight: bold;
+  width: 100%;
+}
+
+.Palette-name {
+  margin: 0 1rem;
 }
 
 .Palette-emoji {
