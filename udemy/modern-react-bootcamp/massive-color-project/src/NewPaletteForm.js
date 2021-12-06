@@ -12,6 +12,7 @@ import { arrayMoveImmutable } from 'array-move';
 import PaletteFormNav from './PaletteFormNav';
 import ColorPickerForm from './ColorPickerForm';
 import styles from './styles/NewPaletteFormStyles';
+import seedColors from './seedColors';
 
 class NewPaletteForm extends Component {
   constructor(props) {
@@ -49,8 +50,9 @@ class NewPaletteForm extends Component {
   };
   getRandomColors = (num) => {
     let randColors = [];
+    const basePalettes = this.props.palettes.length > 0 ? this.props.palettes : seedColors;
     while (randColors.length < num) {
-      const randPalette = this.props.palettes[Math.floor(Math.random() * this.props.palettes.length)];
+      const randPalette = basePalettes[Math.floor(Math.random() * basePalettes.length)];
       const randColor = randPalette.colors[Math.floor(Math.random() * 20)];
       if (!randColors.includes(randColor)) {
         randColors.push(randColor);
@@ -140,6 +142,7 @@ class NewPaletteForm extends Component {
             deleteColorBox={this.deleteColorBox}
             axis="xy"
             onSortEnd={this.onSortEnd}
+            distance={10}
           />
         </main>
       </div>

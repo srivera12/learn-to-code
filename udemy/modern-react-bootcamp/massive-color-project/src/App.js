@@ -7,6 +7,20 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import PaletteList from './PaletteList';
 import SingleColorPalette from './SingleColorPalette';
 import NewPaletteForm from './NewPaletteForm';
+import generated from './generated.svg';
+import withStyles from '@material-ui/styles/withStyles';
+
+const styles = {
+  root: {
+    backgroundImage: `url(${generated})`,
+    backgroundSize: 'cover',
+    backgroundPostion: 'center',
+    backgroundRepeat: 'no-repeat',
+    // '@media (max-width: 500px)': {
+    //   backgroundSize: '200% 200%',
+    // },
+  },
+};
 
 class App extends Component {
   constructor(props) {
@@ -14,23 +28,34 @@ class App extends Component {
     const savedPalettes = JSON.parse(window.localStorage.getItem('palettes'));
     this.state = {
       palettes: savedPalettes || seedColors,
+      dialogOpen: false,
+      deleteID: '',
     };
     this.savePalette = this.savePalette.bind(this);
     this.deletePalette = this.deletePalette.bind(this);
     this.syncLocalStorage = this.syncLocalStorage.bind(this);
+    this.handleClickOpen = this.handleClickOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
   savePalette(newPalette) {
     this.setState({ palettes: [...this.state.palettes, newPalette] }, this.syncLocalStorage);
   }
-  deletePalette(id) {
-    const lessPalettes = this.state.palettes.filter((palette) => palette.id !== id);
-    this.setState({ palettes: lessPalettes }, this.syncLocalStorage);
+  deletePalette() {
+    const lessPalettes = this.state.palettes.filter((palette) => palette.id !== this.state.deleteID);
+    this.setState({ palettes: lessPalettes, dialogOpen: false }, this.syncLocalStorage);
   }
   syncLocalStorage() {
     window.localStorage.setItem('palettes', JSON.stringify(this.state.palettes));
   }
+  handleClickOpen(id) {
+    this.setState({ dialogOpen: true, deleteID: id });
+  }
+  handleClose() {
+    this.setState({ dialogOpen: false });
+  }
   render() {
-    const { palettes } = this.state;
+    const { palettes, dialogOpen } = this.state;
+    const { classes } = this.props;
     const findPalette = (props) => {
       let id = props.match.params.id;
       let palette = palettes.find((palette) => palette.id === id);
@@ -51,7 +76,7 @@ class App extends Component {
       }
     };
     return (
-      <div className="App">
+      <div className={`App ${classes.root}`}>
         <Switch>
           <Route
             exact
@@ -64,7 +89,14 @@ class App extends Component {
             exact
             path="/"
             render={(routeProps) => (
-              <PaletteList palettes={palettes} deletePalette={this.deletePalette} {...routeProps} />
+              <PaletteList
+                palettes={palettes}
+                deletePalette={this.deletePalette}
+                {...routeProps}
+                open={this.handleClickOpen}
+                close={this.handleClose}
+                dialogOpen={dialogOpen}
+              />
             )}
           />
           <Route exact path="/palette/:id" render={findPalette} />
@@ -76,4 +108,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withStyles(styles)(App);

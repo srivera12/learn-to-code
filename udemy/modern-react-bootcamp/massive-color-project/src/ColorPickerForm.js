@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import { ChromePicker } from 'react-color';
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 import styles from './styles/ColorPickerFormStyles';
+import chroma from 'chroma-js';
 
 class ColorPickerForm extends Component {
   constructor(props) {
@@ -59,7 +60,10 @@ class ColorPickerForm extends Component {
             variant="contained"
             type="submit"
             color="primary"
-            style={{ backgroundColor: currentColor }}
+            style={{
+              backgroundColor: currentColor,
+              color: chroma.contrast(currentColor, 'white') < 4.5 ? 'black' : 'white',
+            }}
             disabled={colors.length >= 20}
           >
             {colors.length < 20 ? 'Add Color' : 'Palette Full'}

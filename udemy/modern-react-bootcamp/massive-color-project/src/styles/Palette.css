@@ -2,15 +2,16 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .Palette-colors {
   height: 90%;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .Palette-footer {
-  background-color: white;
   height: 5vh;
   display: flex;
   justify-content: space-between;
