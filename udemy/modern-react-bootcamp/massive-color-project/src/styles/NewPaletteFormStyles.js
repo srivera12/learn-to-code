@@ -3,6 +3,8 @@ import { drawerWidth } from './constants';
 const styles = (theme) => ({
   root: {
     display: 'flex',
+    backgroundImage: 'none',
+    backgroundColor: 'white',
   },
   hide: {
     display: 'none',

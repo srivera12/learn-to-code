@@ -57,6 +57,7 @@ class PaletteMetaForm extends Component {
                 onChange={this.handleChange}
                 validators={['required', 'isPaletteNameUnique']}
                 errorMessages={['Palettes must have a name', 'Palette name already used']}
+                autoFocus
               />
               <DialogContentText>Please select an emoji for your new palette.</DialogContentText>
               {showEmoji ? (
