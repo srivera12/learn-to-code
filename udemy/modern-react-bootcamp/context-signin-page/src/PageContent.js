@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { ThemeContext } from './contexts/ThemeContext';
 
-class PageContent extends Component {
-  static contextType = ThemeContext;
-  render() {
-    const { isDark } = this.context;
-    const styles = {
-      backgroundColor: isDark ? 'black' : 'white',
-      height: '100vh',
-      width: '100vw',
-    };
-    return <div style={styles}>{this.props.children}</div>;
-  }
+function PageContent(props) {
+  const { isDark } = useContext(ThemeContext);
+  const styles = {
+    backgroundColor: isDark ? 'black' : 'white',
+    height: '100vh',
+    width: '100vw',
+  };
+  return <div style={styles}>{props.children}</div>;
 }
 
 export default PageContent;
