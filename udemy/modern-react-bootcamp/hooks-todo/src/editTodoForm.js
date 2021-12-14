@@ -1,12 +1,14 @@
-import React from 'react';
-import { Paper, TextField, Button, ListItem, ListItemSecondaryAction } from '@material-ui/core';
+import { Button, ListItemSecondaryAction, TextField } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { DispatchContext } from './contexts/TodosContext';
 import useInputState from './hooks/useInputState';
 
-function EditTodoForm({ toggleEdit, id, task, editTodo }) {
-  const [value, handleChange, reset] = useInputState(task);
+function EditTodoForm({ toggleEdit, id, task }) {
+  const dispatch = useContext(DispatchContext);
+  const [value, handleChange] = useInputState(task);
   const handleSubmit = (e) => {
     e.preventDefault();
-    editTodo(id, value);
+    dispatch({ type: 'EDIT', id: id, update: value });
     toggleEdit();
   };
   return (

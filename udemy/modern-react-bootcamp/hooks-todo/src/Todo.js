@@ -1,15 +1,17 @@
-import { Checkbox, ListItem, ListItemText, ListItemSecondaryAction, IconButton } from '@material-ui/core';
+import { Checkbox, IconButton, ListItem, ListItemSecondaryAction, ListItemText } from '@material-ui/core';
 import { Delete, Edit } from '@material-ui/icons/';
-import React, { useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
+import { DispatchContext } from './contexts/TodosContext';
 import EditTodoForm from './editTodoForm';
 
-function Todo({ id, task, isCompleted, deleteTodo, toggleComplete, editTodo }) {
+function Todo({ id, task, isCompleted }) {
+  const dispatch = useContext(DispatchContext);
   const [isEditing, setIsEditing] = useState(false);
   const handleToggleComplete = () => {
-    toggleComplete(id);
+    dispatch({ type: 'TOGGLECOMPLETE', id: id });
   };
   const handleDeleteTodo = () => {
-    deleteTodo(id);
+    dispatch({ type: 'DELETE', id: id });
   };
   const handleToggleEdit = () => {
     setIsEditing(!isEditing);
@@ -17,7 +19,7 @@ function Todo({ id, task, isCompleted, deleteTodo, toggleComplete, editTodo }) {
   return (
     <ListItem style={{ backgroundColor: !isCompleted ? 'white' : 'lightblue', height: '64px' }}>
       {isEditing ? (
-        <EditTodoForm id={id} task={task} editTodo={editTodo} toggleEdit={handleToggleEdit} />
+        <EditTodoForm id={id} task={task} toggleEdit={handleToggleEdit} />
       ) : (
         <>
           <Checkbox onClick={handleToggleComplete} tabIndex={-1} checked={isCompleted} color="primary" />
@@ -36,4 +38,4 @@ function Todo({ id, task, isCompleted, deleteTodo, toggleComplete, editTodo }) {
   );
 }
 
-export default Todo;
+export default memo(Todo);

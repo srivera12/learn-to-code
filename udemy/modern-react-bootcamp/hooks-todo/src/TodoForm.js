@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Paper, TextField, Button } from '@material-ui/core';
+import { Button, Paper, TextField } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { DispatchContext } from './contexts/TodosContext';
 import useInputState from './hooks/useInputState';
 
 function TodoForm(props) {
   const [value, handleChange, reset] = useInputState('');
+  const dispatch = useContext(DispatchContext);
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTodo(value);
+    dispatch({ type: 'ADD', task: value });
     reset();
   };
   return (
