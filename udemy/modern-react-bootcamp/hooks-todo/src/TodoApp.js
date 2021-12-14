@@ -1,35 +1,33 @@
 import {
   AppBar,
   Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
   Grid,
   Paper,
   Toolbar,
   Typography,
-  Dialog,
-  DialogTitle,
-  DialogContent,
 } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
-import uuid from 'uuid/dist/v4';
+import React, { useContext, useState, useEffect } from 'react';
+import { DispatchContext, TodosContext } from './contexts/TodosContext';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
-import useTodoState from './hooks/useTodoState';
 
 function TodoApp() {
-  const initialTodos = JSON.parse(window.localStorage.getItem('todos') || '[]');
-  const { todos, addTodo, deleteTodo, toggleComplete, editTodo, clearTodos } = useTodoState(initialTodos);
+  const todos = useContext(TodosContext);
+  const dispatch = useContext(DispatchContext);
   const [deleteDialog, setDeleteDialog] = useState(false);
   const [congratsDialog, setCongratsDialog] = useState(false);
+  const toggleDeleteDialog = () => {
+    setDeleteDialog(!deleteDialog);
+  };
   useEffect(() => {
-    window.localStorage.setItem('todos', JSON.stringify(todos));
     const undoneTodos = todos.filter((todo) => todo.isCompleted === false);
     if (todos.length > 0 && undoneTodos.length === 0) {
       setCongratsDialog(true);
     }
   }, [todos]);
-  const toggleDeleteDialog = () => {
-    setDeleteDialog(!deleteDialog);
-  };
   const toggleCongratsDialog = () => {
     setCongratsDialog(!congratsDialog);
   };
@@ -50,8 +48,8 @@ function TodoApp() {
       </AppBar>
       <Grid container justifyContent="center" style={{ marginTop: '1rem' }}>
         <Grid item xs={11} md={8} lg={6}>
-          <TodoForm addTodo={addTodo} />
-          <TodoList todos={todos} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo} />
+          <TodoForm />
+          <TodoList />
         </Grid>
       </Grid>
       <Button
@@ -71,7 +69,7 @@ function TodoApp() {
             color="secondary"
             style={{ margin: '0.5rem' }}
             onClick={() => {
-              clearTodos();
+              dispatch({ type: 'CLEAR' });
               toggleDeleteDialog();
             }}
           >
