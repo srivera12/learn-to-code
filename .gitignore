@@ -6,4 +6,3 @@ build/
 *.bak
 *.prettierrc
 .next/
-**/bootcamp-starter
