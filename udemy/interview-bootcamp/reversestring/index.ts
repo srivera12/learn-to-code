@@ -1,7 +1,11 @@
-function reverse(str) {
+function reverse(str: string) {
   // confirm input is string - error case
+  if (typeof str !== 'string') {
+    throw new Error('input must be string');
+  }
+
   // turn str to array - split('')
-  // ,reverse() then join back to string
+  // reverse() then join back to string
   // OR for loop to iterate back to front, push each letter into array, join to make a string
 
   //   // OPTION 1
@@ -14,5 +18,3 @@ function reverse(str) {
   // OPTION 2
   return str.split('').reverse().join('');
 }
-
-module.exports = reverse;
