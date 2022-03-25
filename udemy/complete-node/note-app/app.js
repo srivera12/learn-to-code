@@ -1,4 +1,4 @@
-import { addNote, removeNote, listNotes, readNote } from './notes.js';
+import { addNote, removeNote, listNotes, readNote, appendNote } from './notes.js';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
@@ -53,4 +53,23 @@ yargs(hideBin(process.argv))
   )
   .command('list', 'lists all notes', {}, () => {
     listNotes();
-  }).argv;
+  })
+  .command(
+    'append',
+    'appends additional text to a note',
+    {
+      title: {
+        describe: 'title of the note',
+        demandOption: true,
+        type: 'string',
+      },
+      additionalText: {
+        describe: 'the new text to append to note',
+        demandOption: true,
+        type: 'string',
+      },
+    },
+    (argv) => {
+      appendNote(argv.title, argv.additionalText);
+    }
+  ).argv;

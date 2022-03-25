@@ -59,3 +59,17 @@ export const readNote = (title) => {
     console.log(chalk.greenBright(wantedNote.body));
   }
 };
+
+export const appendNote = (title, additionalText) => {
+  const notes = loadNotes();
+  const wantedNote = notes.find((note) => note.title === title);
+  if (!wantedNote) {
+    console.log(chalk.red(`No note titled ${title} exists. To create a new note, use the 'add' command.`));
+  } else {
+    const appendedNotes = notes.map((note) =>
+      note.title === title ? { title: note.title, body: `${note.body} ${additionalText}` } : note
+    );
+    saveNotes(appendedNotes);
+    console.log(chalk.green(`Note titled ${title} has been appended.`));
+  }
+};
