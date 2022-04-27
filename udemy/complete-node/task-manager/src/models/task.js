@@ -1,22 +1,29 @@
 import mongoose from 'mongoose';
 
 //   Task model
-const Task = mongoose.model('Task', {
-  task: {
-    type: String,
-    required: true,
-    trim: true,
+const taskSchema = new mongoose.Schema(
+  {
+    task: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    isCompleted: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'User',
+    },
   },
-  isCompleted: {
-    type: Boolean,
-    required: false,
-    default: false,
-  },
-  owner: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: 'User',
-  },
-});
+  {
+    timestamps: true,
+  }
+);
+
+const Task = mongoose.model('Task', taskSchema);
 
 export default Task;

@@ -5,53 +5,58 @@ import jwt from 'jsonwebtoken';
 import Task from './task.js';
 
 // making the schema so can use middleware
-const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    trim: true,
-    lowercase: true,
-    unique: true,
-    validate(value) {
-      if (!validator.isEmail(value)) {
-        throw new Error('User needs a valid email.');
-      }
+const userSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true,
     },
-  },
-  password: {
-    type: String,
-    required: true,
-    trim: true,
-    minLength: 7,
-    validate(value) {
-      if (value.toLowerCase().includes('password')) {
-        throw new Error('Password cannot contain the word "password".');
-      }
-    },
-  },
-  age: {
-    type: Number,
-    default: 0,
-    validate(value) {
-      if (value < 0) {
-        throw new Error('Age cannot be a negative number.');
-      }
-    },
-  },
-  tokens: [
-    {
-      token: {
-        type: String,
-        required: true,
+    email: {
+      type: String,
+      required: true,
+      trim: true,
+      lowercase: true,
+      unique: true,
+      validate(value) {
+        if (!validator.isEmail(value)) {
+          throw new Error('User needs a valid email.');
+        }
       },
     },
-  ],
-});
+    password: {
+      type: String,
+      required: true,
+      trim: true,
+      minLength: 7,
+      validate(value) {
+        if (value.toLowerCase().includes('password')) {
+          throw new Error('Password cannot contain the word "password".');
+        }
+      },
+    },
+    age: {
+      type: Number,
+      default: 0,
+      validate(value) {
+        if (value < 0) {
+          throw new Error('Age cannot be a negative number.');
+        }
+      },
+    },
+    tokens: [
+      {
+        token: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
 
 // setting up virtual field: tasks
 userSchema.virtual('tasks', {
