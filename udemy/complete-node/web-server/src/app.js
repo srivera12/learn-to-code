@@ -1,6 +1,9 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+const { query } = require('express');
+const geoCode = require('./utils/geoCode.js');
+const forecast = require('./utils/forecast.js');
 
 const app = express();
 
@@ -40,9 +43,42 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
+  if (!req.query.location) {
+    return res.send({
+      error: 'You must provide a location in order to see the weather.',
+    });
+  }
+  geoCode(req.query.location, (geoError, { lat, long, place_name } = {}) => {
+    if (geoError) {
+      return res.send({
+        error: geoError,
+      });
+    } else {
+      forecast(lat, long, (weatherError, { observation_time, weather_descriptions, temperature, feelslike } = {}) => {
+        if (weatherError) {
+          return res.send({
+            error: weatherError,
+          });
+        } else {
+          res.send({
+            placeAndTime: `${place_name} on ${observation_time}:`,
+            forecast: `The weather is ${weather_descriptions[0]} and the temperature is ${temperature} but it feels like ${feelslike}.`,
+          });
+        }
+      });
+    }
+  });
+});
+
+app.get('/products', (req, res) => {
+  if (!req.query.search) {
+    return res.send({
+      error: 'You must provide a search term',
+    });
+  }
+  console.log(req.query.search);
   res.send({
-    location: `Showing weather for place and time.`,
-    forecast: `Currently the weather is description. The temperature is temperature and the feels like is feelslike.`,
+    products: [],
   });
 });
 

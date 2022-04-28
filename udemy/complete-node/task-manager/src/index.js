@@ -8,7 +8,7 @@ import auth from './middleware/auth.js';
 // create express application
 const app = express();
 // sets port - real one used or 3000 for development
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 // setting up express to parse the incoming JSON data, and use the 2 routers
 app.use(express.json());
