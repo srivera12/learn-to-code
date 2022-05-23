@@ -1,0 +1,18 @@
+{
+  "name": "ig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "env-cmd -f ../../config/dev.env node-pg-migrate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "env-cmd": "^10.1.0",
+    "express": "^4.18.1",
+    "node-pg-migrate": "^6.2.1",
+    "pg": "^8.7.3"
+  }
+}
